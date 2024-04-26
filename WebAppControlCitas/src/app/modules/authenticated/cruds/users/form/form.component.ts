@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { type FormGroup, Validators } from '@angular/forms'
 import { BaseForm } from '../../../base/baseForm'
-import { Perfile } from '../users.component'
 import { hasValue } from '../../../../../utils/validations'
 
 @Component({
@@ -15,48 +14,30 @@ export class FormUsersComponent extends BaseForm {
     roles: []
   }
 
-  override path: string = 'user'
+  override path: string = 'usuario'
   override form: FormGroup = this.fb.group({
     // Define tus controles y reglas de validación aquí
-    name: ['', Validators.required],
-    phone: ['', Validators.required],
-    password: [''],
-    documentNumber: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    roles: [[], [Validators.required]]
+    correo: ['', [Validators.required, Validators.email]],
+    fechaCreacion: ['', Validators.required],
+    contrasena: ['']
   })
 
   override async setInstance (data: any): Promise<any> {
     this.form.patchValue({
-      name: data.nombres,
-      phone: data.telefono,
-      documentNumber: data.identificacion,
-      email: data.correo,
-      roles: data.perfiles.map((x: Perfile) => ({ label: x.rol.nombre, value: x.rolId })) // importante el orden de las claves debe ser igual
+      correo: data.correo,
+      fechaCreacion: data.fechaCreacion,
+      contrasena: data.contrasena
     })
   }
 
-  override async setList (): Promise<boolean> {
-    return await new Promise((resolve) => {
-      this.optionsList.roles = this.data.optionsList.roles
-      resolve(true)
-    })
-  }
-
+ 
   override formatData (form: any): any {
-    const roles = form.roles.map((x: any) => ({ rolId: x.value }))
     const formData: any = {
-      tipoIdentificacion: 1,
-      identificacion: form.documentNumber,
-      nombres: form.name,
-      telefono: form.phone,
-      correo: form.email,
-      // password: '123456789',
-      activo: true,
-      perfiles: roles
-    }
-    if (hasValue(form.password)) {
-      formData.password = form.password
+      correo: form.correo,
+      fechaCreacion: form.fechaCreacion
+    } 
+    if (hasValue(form.contrasena)) {
+      formData.contrasena = form.contrasena
     }
     return formData
   }

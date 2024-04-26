@@ -2,95 +2,51 @@
     <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Usuario</div>
     <form [formGroup]="form" (ngSubmit)="save()">
 
-      <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+        <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
 
-      <ng-template #thenBlock>
-        <div class="stvInputContainer">
-            <label>Nombres</label>
-            <div class="loader-box"></div>
-        </div>
+        <ng-template #thenBlock>
 
-        <div class="stvInputContainer">
-            <label>Número de documento</label>
-            <div class="loader-box"></div>
-        </div>
-
-        <div class="stvInputContainer">
-            <label>Teléfono</label>
-            <div class="loader-box"></div>
-        </div>
-
-        <div class="stvInputContainer">
-            <label>Correo</label>
-            <div class="loader-box"></div>
-        </div>
-
-        <div class="stvInputContainer">
-            <label>Perfil</label>
-            <div class="loader-box"></div>
-        </div>
-      </ng-template>
-
-      <ng-template #elseBlock>
-        
-        <div class="stvInputContainer">
-            <label>Nombres</label>
-            <input type="text" formControlName="name" placeholder="Escribe el nombre y apellido">
-            <div class="error-text" *ngIf="form.get('name')?.hasError('required')">
-                El nombre es obligatorio.
+            <div class="stvInputContainer">
+                <label>Correo</label>
+                <div class="loader-box"></div>
             </div>
-        </div>
-
-        <div class="stvInputContainer">
-            <label>Número de documento</label>
-            <input type="text" formControlName="documentNumber"  placeholder="Escribe el número de documento">
-            <div class="error-text" *ngIf="form.get('documentNumber')?.hasError('required')">
-                El documento es obligatorio.
+            <div class="stvInputContainer">
+                <label>Fecha Creación</label>
+                <div class="loader-box"></div>
             </div>
-        </div>
-
-        <div class="stvInputContainer">
-            <label>Teléfono</label>
-            <input type="text" formControlName="phone" placeholder="Escribe el télefono">
-            <div class="error-text" *ngIf="form.get('phone')?.hasError('required')">
-                El télefono es obligatorio.
+            <div class="stvInputContainer">
+                <label>Contraseña</label>
+                <div class="loader-box"></div>
             </div>
-        </div>
+        </ng-template>
 
-        <div class="stvInputContainer">
-            <label>Correo</label>
-            <input type="text" formControlName="email"  placeholder="Escribe el correo">
-            <div class="error-text" *ngIf="form.get('email')?.hasError('required')">
-                El email es obligatorio.
+        <ng-template #elseBlock>
+
+            <div class="stvInputContainer">
+                <label>Correo</label>
+                <input type="text" formControlName="correo" placeholder="Escribe el Correo">
+                <div class="error-text" *ngIf="form.get('correo')?.hasError('required')">
+                    El Correo es obligatorio.
+                </div>
             </div>
-            <div class="error-text" *ngIf="form.get('email')?.hasError('email')">
-                El formato de email es incorrecto.
+
+            <div class="stvInputContainer">
+                <label>Fecha Creación</label>
+                <input type="text" formControlName="fechaCreacion" placeholder="Escribe la fechaCreacion">
+                <div class="error-text" *ngIf="form.get('fechaCreacion')?.hasError('required')">
+                    La Fecha Creación es obligatoria.
+                </div>
             </div>
-        </div>
 
-        <div class="stvInputContainer">
-            <label>Contraseña</label>
-            <input type="text" formControlName="password" placeholder="Escribe la contraseña">
-        </div>
-
-
-        <div class="stvInputContainer">
-            <label>Perfil</label>
-            <st-select formControlName="roles" [multiple]="true" [config]="{
-                placeholder: 'Selecciona',
-                moreText: 'más',
-                noResultsFound: 'Sin resultados',
-                displayKey: 'label',
-                searchPlaceholder: 'Buscar',
-                selectAllLabel: 'Seleccionar todo'
-            }" [options]="optionsList.roles" position="fixed" />
-            <div class="error-text" *ngIf="form.get('roles')?.hasError('required')">
-                El rol es obligatorio.
+            <div class="stvInputContainer">
+                <label>Contraseña</label>
+                <input type="text" formControlName="contrasena" placeholder="Escribe la Contraseña">
+                <div class="error-text" *ngIf="form.get('contrasena')?.hasError('required')">
+                    La Contraseña es obligatoria.
+                </div>
             </div>
-        </div>
+        </ng-template>
 
-      </ng-template>
-      
         <div class="formActions">
             <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
             <button class="secondary" type="button" (click)="close()">Cancelar</button>
