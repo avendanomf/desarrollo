@@ -1,0 +1,47 @@
+<!-- <app-splash [show]="loadSplash"></app-splash> -->
+
+<div class="login-page">
+  <div class="opacity-layer"></div>
+  <form class="login-form" (ngSubmit)="login()">
+
+      <img src="/assets/img/colgravas.png" class="logo" />
+      <div class="logo-subtitle">Iniciar sesión</div>
+      <div class="formFields" *ngIf="load; then thenBlock else elseBlock "></div>
+
+      <ng-template #thenBlock>
+        <div class="stvInputContainer loader-box"></div>
+        <div class="stvInputContainer loader-box"></div>
+      </ng-template>
+
+      <ng-template #elseBlock>
+        <div class="stvInputContainer">
+          <label>Correo</label>
+          <div class="input-wrapper">
+            <input type="email" [(ngModel)]="email" (input)="formChange()" name="email" placeholder="Escribe tu correo">
+            <svg class="input-wrapper__icon">
+              <use xlink:href="#svg-email" />
+            </svg>
+          </div>
+        </div>
+        <app-input-pass [(ngModel)]="password" (input)="formChange()" label="Contraseña *"  placeholder="Escribe la contraseña" name="password"/>
+      </ng-template>
+
+      
+      <s-button [disabled]="load || formInvalid" type="submit">Ingresar</s-button>
+
+      <div class="recover_link" (click)="redirectRecover()">¿Has olvidado tu contraseña?</div>
+
+      <!-- <div class="logo-subtitle">Usuario: brayan@mail.com pass: 12345678 </div> -->
+      
+  </form>
+</div>
+
+<stv-modal [show]="errorAlert">
+  <div class="alert">
+    <img class="alert__image" src="/assets/img/cancel.svg" />
+    <div class="alert__title">Error</div>
+    <div class="alert__content">{{errorText}}</div>
+    <s-button (click)="closeErrorAlert()" type="button">Aceptar</s-button>
+  </div>
+</stv-modal>
+

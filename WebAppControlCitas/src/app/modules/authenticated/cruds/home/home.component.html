@@ -1,0 +1,76 @@
+<div class="home-principal-section">
+    <div class="home-principal-content">
+        <div class="top-cards">
+            <st-card-status title="Solicitudes" [listItems]="listSolicitudes" (clickCTA)="showFormSolicitudes()" />
+            <st-card-status title="Ordenes" [listItems]="listOrdenes" (clickCTA)="showFormOrdenes()" />
+        </div>
+        <div class="principal-graphic">
+            <span class="principal-graphic-title">Total Ordenes</span>   
+            <ng-container *ngIf="!isLoad">
+                <canvas appChart [chartData]="chartData" chartType="line" height="300" [legends]="true"></canvas>
+            </ng-container>
+        </div>
+    </div>
+    <div class="home-principal-side">
+        <st-card-status title="Clientes" [listItems]="listClientes" (clickCTA)="showFormSolicitudes()" />
+        <st-card-status title="Proyectos" [listItems]="listProyectos" (clickCTA)="showFormSolicitudes()" />
+        <st-card-status title="Vehiculos" [listItems]="listVehiculos" (clickCTA)="showFormSolicitudes()" />
+    </div>
+
+</div>
+
+<div class="bottom-graphics">
+    <div class="circle-graphic-item">
+        <div class="circle-graphic-item-title">RCD</div>
+        <div class="circle-graphic-item-content">
+            <canvas class="circle-graphic-item-chart" appChart [chartData]="doughnutData" chartType="doughnut" height="120"></canvas>
+            <div class="circle-graphic-legends">
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">United States</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Canada</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Mexico</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Other</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="circle-graphic-item">
+        <div class="circle-graphic-item-title">Suministro</div>
+        <div class="circle-graphic-item-content">
+            <canvas class="circle-graphic-item-chart" appChart [chartData]="doughnutData" chartType="doughnut" height="120"></canvas>
+            <div class="circle-graphic-legends">
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">United States</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Canada</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Mexico</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+                <div class="circle-graphic-legend">
+                    <span class="circle-graphic-legend-title">Other</span>
+                    <span class="circle-graphic-legend-text">38 %</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,32 @@
+<div class="filter-item" *ngFor="let item of filtersList; index as i;">
+
+  <div
+    [class]="'filters-search ' + (item.class || '')"  
+    *ngIf="item.type === 'input'">
+    <input 
+      class="search"
+      type="text"
+      [value]="item.value"
+      name="searchUser"
+      (input)="handleChangeInput($event, item)"
+      [placeholder]="item.placeholder">
+    <img class="search-icon" src="/assets/icons/search.svg">
+  </div>
+
+  <div
+    [class]="'select ' + (item.class || '')"
+    *ngIf="item.type === 'select' && item.options">
+    <st-select
+      [options]="item.options"
+      [config]="setConfigSelects(item)"
+      (select)="handleChangeSelect($event, item)" />
+  </div>
+
+</div>
+
+<div class="clear-filters-btn" (click)="clearFiltersHandler()">
+  <svg>
+    <use xlink:href="#svg-filter-off" />
+  </svg>
+</div>
+

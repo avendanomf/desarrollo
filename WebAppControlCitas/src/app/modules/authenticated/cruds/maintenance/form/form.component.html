@@ -1,0 +1,36 @@
+<div class="baseDialog">
+    <div class="formTitle">{{accion}} Parametro</div>
+
+    <div class="formContent">
+
+        <div class="stvInputContainer">
+            <label>Nombre del parametro</label>
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Escribe el nombre">
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Categoria</label>
+            <st-select [config]="configCat"
+                [options]="optionsCategoria" [multiple]=false />
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Valor</label>
+            <input type="text" [(ngModel)]="value" name="unit_of_measure"
+                placeholder="Escribe la unidad de medida">
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Estado</label>
+            <st-select [config]="config" 
+                [options]="options" [multiple]=false />
+        </div>
+
+
+
+    </div>
+    <div class="formActions">
+        <button class="primary" (click)="save()">Guardar</button>
+        <button class="secondary" (click)="close()">Cancelar</button>
+    </div>
+</div>

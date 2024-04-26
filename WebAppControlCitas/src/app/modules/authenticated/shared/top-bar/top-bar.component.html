@@ -1,0 +1,36 @@
+<div class="menutop">
+  <img alt='toggle sidebar' (click)="toogleSidebar()" class='toggle-icon' src='/assets/icons/menu.svg' />
+
+  <div class="right-actions">
+    <div class="notifications-wrapper">
+      <div class="tooltip-box">
+        <div class="tooltip-label">
+          <img src="/assets/icons/bell.svg" alt="User logged menu">
+        </div>
+        <div class="tooltip-content">
+          <p>Notificación 1</p>
+          <p>Notificación 2</p>
+          <p>Notificación 3</p>
+        </div>
+      </div>
+    </div>
+    <div class="user-login-options-wrapper">
+      <div class="tooltip-box">
+        <div class="tooltip-label">
+          <div class="user-login-options">
+            <img src="/assets/icons/account_circle.svg" alt="User logged menu">
+            <span>Marcela</span>
+            <svg>
+              <use xlink:href="#svg-drop-down" />
+            </svg>
+          </div>
+        </div>
+        <div class="tooltip-content">
+          <div (click)="logout()" class="close-session">Cerrar sesión</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

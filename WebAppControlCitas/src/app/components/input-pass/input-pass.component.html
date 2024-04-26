@@ -1,0 +1,11 @@
+<div class="stvInputContainer">
+    <label>{{label}}</label>
+    <div class="input-pass-wrapper">
+        <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" (input)="onInputChange()" name="password" [placeholder]="placeholder">
+        <div class="toogle-visibility" (click)="togglePasswordVisibility()">
+            <svg class="stv-modal-close" >
+                <use [attr.xlink:href]="showPassword ? '#svg-visibility' : '#svg-visibility-off'" />
+            </svg>
+        </div>
+    </div>
+</div>

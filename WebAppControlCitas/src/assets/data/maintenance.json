@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "name": "Tarifa por Recolección",
+      "category": "Negocio",
+      "value": 50,
+      "status": "Activo"
+    },
+    {
+      "id": 2,
+      "name": "Capacidad de Vehículo",
+      "category": "Negocio",
+      "value": 10,
+      "status": "Activo"
+    },
+    {
+      "id": 3,
+      "name": "Descuento por Reciclaje",
+      "category": "Negocio",
+      "value": 5,
+      "status": "Activo"
+    },
+    {
+      "id": 4,
+      "name": "Precio del Metro Cúbico de Material",
+      "category": "Negocio",
+      "value": 80,
+      "status": "Activo"
+    },
+    {
+      "id": 5,
+      "name": "Stock Mínimo de Materiales",
+      "category": "Negocio",
+      "value": 50,
+      "status": "Activo"
+    },
+    {
+      "id": 6,
+      "name": "Número Máximo de Vehículos",
+      "category": "Negocio",
+      "value": 15,
+      "status": "Activo"
+    },
+    {
+      "id": 7,
+      "name": "Tiempo de Entrega de Materiales",
+      "category": "Negocio",
+      "value": 3,
+      "status": "Activo"
+    },
+    {
+      "id": 8,
+      "name": "Descuento por Volumen de Residuos",
+      "category": "Negocio",
+      "value": 7,
+      "status": "Activo"
+    },
+    {
+      "id": 9,
+      "name": "Costo de Mantenimiento de Vehículos",
+      "category": "Negocio",
+      "value": 100,
+      "status": "Activo"
+    },
+    {
+      "id": 10,
+      "name": "Costo de Envío de Materiales",
+      "category": "Negocio",
+      "value": 20,
+      "status": "Activo"
+    },
+    {
+      "id": 11,
+      "name": "Impuesto sobre Ingresos",
+      "category": "Sistema",
+      "value": 5,
+      "status": "Activo"
+    },
+    {
+      "id": 12,
+      "name": "Tasa de Interés de Financiamiento",
+      "category": "Sistema",
+      "value": 8,
+      "status": "Activo"
+    },
+    {
+      "id": 13,
+      "name": "Límite de Usuarios por Rol",
+      "category": "Sistema",
+      "value": 50,
+      "status": "Activo"
+    },
+    {
+      "id": 14,
+      "name": "Duración de Sesión (minutos)",
+      "category": "Sistema",
+      "value": 30,
+      "status": "Activo"
+    },
+    {
+      "id": 15,
+      "name": "Costo de Licencia de Software",
+      "category": "Sistema",
+      "value": 2000,
+      "status": "Activo"
+    },
+    {
+      "id": 16,
+      "name": "Cantidad Máxima de Almacenamiento",
+      "category": "Sistema",
+      "value": 500,
+      "status": "Activo"
+    },
+    {
+      "id": 17,
+      "name": "Frecuencia de Respaldo de Datos",
+      "category": "Sistema",
+      "value": 7,
+      "status": "Activo"
+    },
+    {
+      "id": 18,
+      "name": "Nivel de Acceso a Reportes",
+      "category": "Sistema",
+      "value": "Completo",
+      "status": "Activo"
+    },
+    {
+      "id": 19,
+      "name": "Número de Sucursales Permitidas",
+      "category": "Sistema",
+      "value": 5,
+      "status": "Activo"
+    },
+    {
+      "id": 20,
+      "name": "Límite de Peticiones por Minuto (API)",
+      "category": "Sistema",
+      "value": 100,
+      "status": "Activo"
+    }
+  ]
+  

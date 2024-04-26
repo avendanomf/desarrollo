@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "date": "14-01-2022",
+    "customer": ["Constructora ABC"],
+    "project": "Proyecto Entre Ríos",
+    "location": "Avenida 7 # 23-45",
+    "supervisor": "Ana Rodríguez",
+    "status": "Activo"
+  },
+  {
+    "id": 2,
+    "date": "21-02-2022",
+    "customer": ["Inversiones XYZ","Rodríguez Ingeniería SAS"],
+    "project": "Desarrollo Urbano 2022",
+    "location": "Calle 10 # 30-12",
+    "supervisor": "Juan Pérez",
+    "status": "Inactivo"
+  },
+  {
+    "id": 3,
+    "date": "05-03-2022",
+    "customer": ["Construcciones Delta"],
+    "project": "Renovación Residencial",
+    "location": "Carrera 15 # 18-22",
+    "supervisor": "María Gómez",
+    "status": "Activo"
+  },
+  {
+    "id": 4,
+    "date": "12-04-2022",
+    "customer": ["Proyectos Futuros SA"],
+    "project": "Innovación Empresarial",
+    "location": "Avenida 5 # 25-30",
+    "supervisor": "Luis Torres",
+    "status": "Inactivo"
+  }
+]

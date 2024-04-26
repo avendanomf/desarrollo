@@ -1,0 +1,93 @@
+<div [class]="'dashboard-menu-wrapper ' +  (sidebarToggle ? 'sidebarFull' : 'sidebarMini') ">
+  
+  <div class='dashboard-menu'>
+    <img alt='logo' class='dashboard-menu-logo logo-sm' src='/assets/img/logo-texto.png' (click)="router.navigate(['home'])" />
+    <img alt='logo' class='dashboard-menu-logo logo-xs' src='/assets/img/colgravas.png' (click)="router.navigate(['home'])" />
+   
+    <div class='menu-container'>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/home/">
+        <svg>
+          <use xlink:href="#svg-menu-home" />
+        </svg>
+        <span>Home</span>
+      </a>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/request/">
+        <img src="/assets/icons/solicitudes.svg" alt="">
+        <span>Solicitudes</span>
+      </a>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/orders/">
+        <img src="/assets/icons/ordenes.svg" alt="">
+        <span>Ordenes</span>
+      </a>
+
+      <div class="menu-dropdown" routerLinkActive="is-active">
+        
+        <div class="menu-element menu-dropdown-title">
+          <img src="/assets/icons/usuarios.svg" alt="">
+          <span>
+            Usuarios
+          </span>
+          <svg>
+            <use xlink:href="#svg-arrow-ios" />
+          </svg>
+        </div>
+        <div class="menu-dropdown-content">
+          <a class="menu-sub-element" routerLinkActive="is-active" routerLink="/users/all/">
+            <svg>
+              <use xlink:href="#svg-arrow-ios" />
+            </svg>
+            <span>Usuarios</span>
+          </a>
+          <a class="menu-sub-element" routerLinkActive="is-active" routerLink="/users/drivers/">
+            <svg>
+              <use xlink:href="#svg-arrow-ios" />
+            </svg>
+            <span>Conductores</span>
+          </a>
+        </div>
+
+      </div>
+      <!-- <a class="menu-element" routerLinkActive="is-active" routerLink="/users/">
+        <img src="/assets/icons/usuarios.svg" alt="">
+        <span>Usuarios</span>
+      </a> -->
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/customers/">
+        <img src="/assets/icons/usuarios_with_bag.svg" alt="">
+        <span>Clientes</span>
+      </a>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/projects/">
+        <img src="/assets/icons/proyectos.svg" alt="">
+        <span>Proyectos</span>
+      </a>
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/vehicles/">
+        <img src="/assets/icons/vehiculos.svg" alt="">
+        <span>Vehiculos</span>
+      </a>
+      
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/suppliers/">
+        <img src="/assets/icons/proveedores.svg" alt="">
+        <span>Proveedores</span>
+      </a>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/products/">
+        <img src="/assets/icons/Servicios.svg" alt="">
+        <span>Productos</span>
+      </a>
+
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/reports/">
+        <img src="/assets/icons/reporte.svg" alt="">
+        <span>Reportes</span>
+      </a>
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/maintenance/">
+        <img src="/assets/icons/maintenance.svg" alt="">
+        <span>Matenimiento</span>
+      </a>
+    </div>
+
+  </div>
+</div>

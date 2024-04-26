@@ -1,0 +1,8 @@
+
+    <div [class]="'stv-modal ' +  (show ? 'show' : 'hide' ) + ' ' + className">
+        <div class="stv-modal-backdrop"></div>
+        <div class="stv-modal-content">
+            <ng-content></ng-content>
+        </div>
+    
+    </div>

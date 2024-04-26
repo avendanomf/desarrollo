@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "date": "14-01-2022",
+      "name": "Escombros de Concreto",
+      "category": "Residuos",
+      "unit_of_measure": "Metro Cúbico",
+      "status": "Activo"
+    },
+    {
+      "id": 2,
+      "date": "25-02-2022",
+      "name": "Residuos de Ladrillos y Bloques",
+      "category": "Residuos",
+      "unit_of_measure": "Metro Cúbico",
+      "status": "Inactivo"
+    },
+    {
+      "id": 3,
+      "date": "10-03-2022",
+      "name": "Escombros de Madera",
+      "category": "Residuos",
+      "unit_of_measure": "Metro Cúbico",
+      "status": "Pendiente"
+    },
+    {
+      "id": 4,
+      "date": "18-04-2022",
+      "name": "Arena",
+      "category": "Suministro",
+      "unit_of_measure": "Metro Cúbico",
+      "status": "Activo"
+    },
+    {
+      "id": 5,
+      "date": "29-05-2022",
+      "name": "Bloque No 4",
+      "category": "Suministro",
+      "unit_of_measure": "Metro Cúbico",
+      "status": "Inactivo"
+    }
+  ]
+  

@@ -1,0 +1,56 @@
+@import './input';
+@import './buttons';
+
+.error-field {
+    color: #dd0101;
+    font-size: 12px;
+    margin: 0;
+}
+
+.baseDialog {
+    padding: 22px 36px 40px;
+    .loader-box {
+        height: 34px;
+    }
+    .formTitle {
+        color: #000;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .formContent {
+        margin: 10px 0 20px;
+    }
+  
+    .formActions {
+        display: flex;
+        justify-content: center;
+        gap: 36px;
+        margin-top: 20px;
+        button {
+            height: 40px;
+            width: 150px;
+            &:hover {
+                outline: none;
+            }
+            &.grey {
+                background-color: var(--template-cian);
+            }
+        }
+    }
+}
+
+
+.stvInputContainer{
+
+    &.Select {
+        select {
+            border: none;
+            height: 100%;
+            width: 100%;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

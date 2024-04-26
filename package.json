@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/material": "^17.3.6",
+    "chart.js": "^4.4.2",
+    "ngx-select-dropdown": "^3.3.2"
+  }
+}

@@ -1,0 +1,11 @@
+<div class="st-select-wrapper" #select>
+    <ngx-select-dropdown
+        [config]="config"
+        [options]="options"
+        [(ngModel)]="value"
+        [multiple]="multiple"
+        (change)="onSelect($event)"
+        (open)="onOpenSelect()"
+        (close)="onCloseSelect()"
+    ></ngx-select-dropdown>
+</div>

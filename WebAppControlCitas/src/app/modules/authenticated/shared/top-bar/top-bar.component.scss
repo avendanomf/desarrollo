@@ -1,0 +1,100 @@
+
+$hover-color: #b4b4b410;
+
+.menutop {
+  align-items: center;
+  background-color: #fffefe;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  margin: 12px 12px 0;
+  padding: 0 20px 0 10px;
+  margin-left: 0;
+  img.toggle-icon {
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+  }
+
+  .right-actions {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    .notifications-wrapper {
+      cursor: pointer;
+      margin-right: 16px;
+      img {
+        height: 34px;
+        width: auto;
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+    }
+    .user-login-options {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      &:hover {
+        background-color: $hover-color;
+      }
+      img {
+        border-radius: 100%;
+        cursor: pointer;
+        height: 40px;
+        margin-right: 8px;
+        width: auto;
+      }
+      span {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        margin-right: 8px;
+      }
+      svg {
+        fill: black;
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    .close-session {
+      cursor: pointer;
+      width: 120px;
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    .tooltip-box {
+      height: inherit;
+      position: relative;
+      width: inherit;
+
+      .tooltip-label {
+        height: inherit;
+        width: inherit;
+      }
+      .tooltip-content {
+        background-color: #fff;
+        border-radius: 8px;
+        display: none;
+        left: 100%;
+        padding: 8px 10px;
+        position: absolute;
+        transform: translate(-100%, 0);
+      }
+
+      &:hover {
+        .tooltip-content {
+          display: block;
+        }
+      }
+    }
+  }
+
+
+
+  
+}

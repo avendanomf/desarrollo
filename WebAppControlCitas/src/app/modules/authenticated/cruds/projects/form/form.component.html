@@ -1,0 +1,109 @@
+<div class="baseDialog">
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Proyectos</div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+      <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+
+      <ng-template #thenBlock>
+        <div class="stvInputContainer">
+            <label>Proyecto</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Cliente</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Ubicacion</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Dirección</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Supervisor</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Observaciones</label>
+            <div class="loader-box"></div>
+        </div>
+        
+      </ng-template>
+
+      <ng-template #elseBlock>
+        
+        <div class="stvInputContainer">
+            <label>Proyecto</label>
+            <input type="text" formControlName="name" placeholder="Escribe el nombre del proyecto">
+            <div class="error-text" *ngIf="form.get('name')?.hasError('required')">
+                El nombre del proyecto es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Cliente</label>
+            <st-select formControlName="customer" position="fixed" [multiple]="false" [config]="{
+                placeholder: 'Selecciona',
+                displayKey: 'label',
+                searchPlaceholder: 'Buscar',
+                selectAllLabel: 'Seleccionar todo'
+            }" [options]="optionsList.customers"/>
+            <div class="error-text" *ngIf="form.get('customer')?.hasError('required')">
+                El cliente es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Ubicacion</label>
+            <input type="text" formControlName="location" placeholder="Escribe la ubicación">
+            <div class="error-text" *ngIf="form.get('location')?.hasError('required')">
+                La ubicación es obligatoria.
+            </div>
+            <div class="error-text" *ngIf="form.get('location')?.hasError('pattern')">
+                La ubicación debe ser un link válido
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Dirección</label>
+            <input type="text" formControlName="address" placeholder="Escribe la dirección">
+            <div class="error-text" *ngIf="form.get('address')?.hasError('required')">
+                La dirección es obligatoria.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Supervisor</label>
+            <st-select formControlName="supervisor" position="fixed" [multiple]="false" [config]="{
+                placeholder: 'Selecciona',
+                moreText: 'más',
+                noResultsFound: 'Sin resultados',
+                displayKey: 'label',
+                searchPlaceholder: 'Buscar',
+                selectAllLabel: 'Seleccionar todo'
+            }" [options]="optionsList.supervisors"/>
+            <div class="error-text" *ngIf="form.get('supervisor')?.hasError('required')">
+                El supervisor es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Observaciones</label>
+            <textarea formControlName="observations" rows="3"></textarea>
+        </div>
+
+      </ng-template>
+      
+        <div class="formActions">
+            <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+            <button class="secondary" type="button" (click)="close()">Cancelar</button>
+        </div>
+    </form>
+</div>

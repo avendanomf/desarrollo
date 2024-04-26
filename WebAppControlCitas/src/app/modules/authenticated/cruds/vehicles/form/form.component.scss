@@ -1,0 +1,21 @@
+.baseDialog {
+  padding: 22px 28px 40px 32px;
+  .formContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 500px;
+    overflow-y: auto;
+    padding-right: 6px;
+    width: 800px;
+    @media(max-width: 1000px) {
+      grid-template-columns: 1fr;
+      width: 500px;
+    }
+  }
+}
+
+
+.loader-box {
+  height: 34px;
+}

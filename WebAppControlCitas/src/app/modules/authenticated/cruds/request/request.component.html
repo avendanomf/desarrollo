@@ -1,0 +1,164 @@
+<div class="crud-toolbar">
+    <div class="filters">
+        <base-filters [filtersList]="filters" (clearFilters)="clearFilters()"
+            (changeFilters)="changeFiltersHandler($event)" />
+    </div>
+    <div class="counter">
+        <span class="counter__label">N Solicitudes</span>
+        <span class="counter__value">{{countItems}}</span>
+    </div>
+    <div class="btn-new">
+        <button class="btn-new" (click)="create()" [disabled]="load">
+            <img class="new-icon" src="/assets/icons/add.svg" alt="">
+            <span>Nuevo</span>
+        </button>
+    </div>
+</div>
+<br>
+
+<div class="crud" #crud>
+
+    <div class="grid-header">
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Id Solicitud</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" (click)="changeOrder('=id')" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" (click)="changeOrder('=-id')" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Fecha Registro</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Cliente</span>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Proyecto</span>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Producto</span>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>F. requerimiento</span>
+
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Estado</span>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text"> </div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="load; then thenBlock else elseBlock "></ng-container>
+
+
+    <ng-template #thenBlock>
+        <div class="grid-body loader-list" *ngIf="widthCrud > 0">
+            <div class="loader-box" [style.width]="widthCrud + 'px'"></div>
+        </div>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <div class="grid-body" *ngFor="let item of listItems; index as i;">
+            <div class="grid-item-body">
+                <span class="body-item-name item-id" (click)="edit(item)">{{item.solicitudesId}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.fechaCreacion}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.obra.cliente.nombre}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.obra.proyecto.nombre}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name" *ngFor="let sr of item.servicios; index as j;">
+                    <ul>
+                        <li>{{sr.producto.nombre}} {{sr.cantidad}}</li>
+                    </ul>
+                </span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.fechaRequerimiento}}</span>
+            </div>
+            <div class="grid-item-body">
+                <div class="item-state">
+                    <span class="body-item-name">
+                        <div class="item-state">
+                            {{item.estado}}
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="grid-item-body item-center actions-icons">
+                <div (click)="edit(item)">
+                    <svg>
+                        <use xlink:href="#svg-pencil" />
+                    </svg>
+                </div>
+                <div (click)="deleteHandler(item)">
+                    <svg>
+                        <use xlink:href="#svg-trash" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+</div>
+
+<app-pager [currentPage]="currentPage" [totalPages]="totalPages" (changePage)="changePageHandler($event)" />
+
+<stv-modal [show]="infoAlert">
+    <div class="alert">
+        <img class="alert__image" src="/assets/img/check_circle.svg" />
+        <div class="alert__title">Solicitud {{ hasInstance ? 'actualizada': 'creada' }}</div>
+        <div class="alert__content">La solicitud se ha {{ hasInstance ? 'actualizado': 'creado' }} correctamente</div>
+        <s-button (click)="closeAlert('infoAlert')" type="button">Aceptar</s-button>
+    </div>
+</stv-modal>
+
+<stv-modal [show]="deleteAlert">
+    <div class="alert">
+        <img class="alert__image" src="/assets/img/check_circle.svg" />
+        <div class="alert__title">Eliminado exitosamente</div>
+        <s-button (click)="closeAlert('deleteAlert')" type="button">Aceptar</s-button>
+    </div>
+</stv-modal>
+
+<stv-modal [show]="errorAlert">
+    <div class="alert">
+        <img class="alert__image" src="/assets/img/cancel.svg" />
+        <div class="alert__title">Error</div>
+        <div class="alert__content">{{errorText}}</div>
+        <s-button (click)="closeAlert('errorAlert')" type="button">Aceptar</s-button>
+    </div>
+</stv-modal>

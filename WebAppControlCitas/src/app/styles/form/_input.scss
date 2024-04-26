@@ -1,0 +1,66 @@
+.stvInputContainer {
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+
+
+    &.invalid {
+        border-color: red;
+    }
+
+    input {
+        height: 34px;
+    }
+
+    label {
+        color: #000;
+        display: inline-block;
+        font-size: 12px;
+        margin-bottom: 2px;
+        transition: all ease .2s;
+        z-index: 0;
+    }
+
+    input {
+        height: 34px;
+    }
+    input, textarea {
+        background-color: #F7F7F7;
+        border: 1px solid #F7F7F7;
+        border-radius: 8px;
+        color: #000;
+        font-size: 14px;
+        border: none;
+        min-height: 34px;
+        padding: 8px;
+        outline: none;
+        resize: none;
+        width: 100%;
+        &::placeholder {
+            color: #C5C5C5;
+        }
+    }
+
+
+
+    // &.is_active {
+    //     label {
+    //         color: #797979;
+    //         font-size: 11px;
+            
+    //         background-color: inherit;
+    //         padding-right: 5px;
+    //         padding-left: 2px;
+    //     }
+    // }
+
+
+}
+
+
+
+.error-text {
+    color: rgb(190, 2, 2);
+    font-size: 12px;
+    margin-top: 4px;
+}

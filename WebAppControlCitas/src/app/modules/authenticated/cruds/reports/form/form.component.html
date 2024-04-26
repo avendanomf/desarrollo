@@ -1,0 +1,157 @@
+<!-- <div class="baseDialog">
+  <div class="formTitle">Generar reporte de {{data.title}}</div>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div class="formContent">
+      <ng-container class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></ng-container>
+    </div>
+  
+    <ng-template #thenBlock>
+
+      <div class="stvInputContainer">
+          <label>Conductor</label>
+          <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Cargar Documento</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Cargar Planilla</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>No Documento</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Fecha vencimiento planilla</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+          <label>No Teléfono</label>
+          <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Fecha vencimiento licencia</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Correo</label>
+        <div class="loader-box"></div>
+      </div>
+
+    </ng-template>
+
+    <ng-template #elseBlock>
+
+      
+      <div class="section-two-columns">
+        <div class="stvInputContainer">
+          <label>Fecha inicial</label>
+          <input type="date" formControlName="fechaInicial" placeholder="Fecha inicial">
+          <div class="error-text" *ngIf="form.get('fechaInicial')?.hasError('required')">
+              la fecha de inicial es obligatoria.
+          </div>
+        </div>
+        
+        <div class="stvInputContainer">
+          <label>Fecha final</label>
+          <input type="date" formControlName="fechaFinal" placeholder="Fecha final">
+          <div class="error-text" *ngIf="form.get('fechaFinal')?.hasError('required')">
+              la fecha de final es obligatoria.
+          </div>
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Cliente</label>
+        <st-select formControlName="customerId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.customers"/>
+        <div class="error-text" *ngIf="form.get('customerId')?.hasError('required')">
+            Cliente es obligatorio.
+        </div>
+      </div>
+
+      
+      <div class="stvInputContainer">
+        <label>Vehiculo</label>
+        <st-select formControlName="customerId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.customers"/>
+        <div class="error-text" *ngIf="form.get('customerId')?.hasError('required')">
+            El vehiculo es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Vehiculo</label>
+        <st-select formControlName="customerId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.customers"/>
+        <div class="error-text" *ngIf="form.get('customerId')?.hasError('required')">
+            El vehiculo es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Proyectos</label>
+        <st-select formControlName="customerId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.customers"/>
+        <div class="error-text" *ngIf="form.get('customerId')?.hasError('required')">
+            El proyectos es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Categoría del servicio</label>
+        <st-select formControlName="customerId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.customers"/>
+        <div class="error-text" *ngIf="form.get('customerId')?.hasError('required')">
+            La categoria es obligatoria.
+        </div>
+      </div>
+
+    </ng-template>
+    
+    <div class="formActions">
+      <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+      <button class="secondary" type="button" (click)="close()">Cancelar</button>
+    </div>
+  </form>
+  
+</div> -->

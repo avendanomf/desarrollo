@@ -1,0 +1,91 @@
+<div class="baseDialog">
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Cliente</div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+    <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+
+    <ng-template #thenBlock>
+        <div class="stvInputContainer">
+            <label>Nombre</label>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>NIT</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Dirección</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Teléfono</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Correo</label>
+            <div class="loader-box"></div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Estado</label>
+            <div class="loader-box"></div>
+        </div>
+    </ng-template>
+
+
+    <ng-template #elseBlock>
+
+        <div class="stvInputContainer">
+            <label>Nombres</label>
+            <input type="text" formControlName="name" placeholder="Escribe el Nombre">
+            <div class="error-text" *ngIf="form.get('name')?.hasError('required')">
+                El nombre es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>NIT</label>
+            <input type="text" formControlName="nit" placeholder="Escribe el número de documento">
+            <div class="error-text" *ngIf="form.get('nit')?.hasError('required')">
+                NIT es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Dirección</label>
+            <input type="text" formControlName="address" placeholder="Escribe la Dirección">
+            <div class="error-text" *ngIf="form.get('address')?.hasError('required')">
+                La Dirección es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Teléfono</label>
+            <input type="text" formControlName="phone" placeholder="Escribe el Teléfono">
+            <div class="error-text" *ngIf="form.get('phone')?.hasError('required')">
+                El Telefono es obligatorio.
+            </div>
+        </div>
+
+        <div class="stvInputContainer">
+            <label>Correo</label>
+            <input type="text" formControlName="email" placeholder="Escribe el correo">
+            <div class="error-text" *ngIf="form.get('email')?.hasError('required')">
+                El Correo es obligatorio.
+            </div>
+            <div class="error-text" *ngIf="form.get('email')?.hasError('email')">
+                El formato de email es incorrecto.
+            </div>
+        </div>
+
+
+    </ng-template>
+    <div class="formActions">
+        <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+        <button class="secondary" type="button" (click)="close()">Cancelar</button>
+    </div>
+</form>
+</div>

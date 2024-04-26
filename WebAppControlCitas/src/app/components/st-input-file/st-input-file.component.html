@@ -1,0 +1,21 @@
+<div class="st-file-input-wrapper">
+    <label>
+        <input type="file" (change)="onFileChange($event)" [accept]="accept" #fileInput>
+
+        <ng-container *ngIf="hasValue(urlFile); then thenBlock else elseBlock "></ng-container>
+
+        <ng-template #thenBlock><span>{{ getName(urlFile) }}</span></ng-template>
+        <ng-template #elseBlock><span>{{ fileName || 'Seleccione archivo'}}</span></ng-template>
+
+        <svg class="stv-modal-close" >
+            <use xlink:href="#svg-file" />
+        </svg>
+    </label>
+    <div class="file-display" #fileList>
+    </div>
+    <div class="st-file-input-actions" *ngIf="hasValue(urlFile)">
+        <a class="file-action" target="_blank" [href]="urlFile">Ver archivo</a>
+        <!-- <div class="file-action">Eliminar</div> -->
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+<div class="reports-group-card">
+ 
+  <div class="reports-group-title">
+    <svg class="asc">
+      <use xlink:href="#svg-download" />
+    </svg>
+    <span>
+      Reportes
+    </span>
+  </div>
+
+  <div class="reports-group-list">
+    
+    <div class="reports-group-list-item" (click)="showFormReport(item)" *ngFor="let item of reportList; index as i;" >
+      <svg class="asc">
+        <use xlink:href="#svg-file" />
+      </svg>
+
+      <span>
+        {{item.title}}
+      </span>
+
+    </div>
+
+  </div>
+
+</div>

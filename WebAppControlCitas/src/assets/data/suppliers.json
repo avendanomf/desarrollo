@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Carlos Betancurt",
+    "nit": "1036847963",
+    "date": "14-01-2022",
+    "email": "contacto@losbetancurt.com",
+    "phone": "546554354",
+    "status": "Activo"
+  },
+  {
+    "id": 2,
+    "name": "Rodríguez Ingeniería SAS",
+    "nit": "2087456312",
+    "date": "25-02-2022",
+    "email": "info@rodriguezingenieria.com",
+    "phone": "789654321",
+    "status": "Inactivo"
+  },
+  {
+    "id": 3,
+    "name": "Pérez Construcciones Ltda.",
+    "nit": "3056897421",
+    "date": "10-03-2022",
+    "email": "contacto@perezconstrucciones.com",
+    "phone": "159753468",
+    "status": "Pendiente"
+  },
+  {
+    "id": 4,
+    "name": "Gómez Arquitectura SA",
+    "nit": "4075123698",
+    "date": "18-04-2022",
+    "email": "info@gomezarquitectura.com",
+    "phone": "456789012",
+    "status": "Activo"
+  },
+  {
+    "id": 5,
+    "name": "Torres Desarrollos Inmobiliarios",
+    "nit": "5098362745",
+    "date": "29-05-2022",
+    "email": "info@torresdesarrollos.com",
+    "phone": "987654321",
+    "status": "Inactivo"
+  }
+]

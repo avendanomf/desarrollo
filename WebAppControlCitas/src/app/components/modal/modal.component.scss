@@ -1,0 +1,90 @@
+.stv-modal {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    inset: 0;
+    position: fixed;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 10;
+
+    .stv-modal-backdrop {
+        background-color: #ffffff50;
+        backdrop-filter: blur(2px);
+        opacity: 0;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        transition: all ease 0.2s;
+        z-index: 1;
+    }
+    
+    .stv-modal-content {
+        background-color: #fff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        min-height: 300px;
+        height: max-content;
+        max-width: 100%;
+        position: relative;
+        transition: all ease-in-out 0.2s;
+        opacity: 0;
+        width: 300px;
+        z-index: 2;
+
+        .alert {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            gap: 12px;
+            padding: 30px;
+            height: 100%;
+            
+            .alert__image { 
+                width: 60px;
+                height: 60px;
+            }
+            .alert__title {
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%; /* 28px */
+                padding: 10px;
+                text-align: center;
+            }
+            .alert__content {
+                color: #000;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: auto;
+                padding: 8px;
+                text-align: center;
+
+            }
+        }
+    }
+
+    &.show {
+        visibility: visible;
+
+        .stv-modal-backdrop {
+            opacity: 1;
+        }
+
+        .stv-modal-content {
+            opacity: 1;
+            transform: translateY(-30px);
+        }
+    }
+
+
+}
+
+

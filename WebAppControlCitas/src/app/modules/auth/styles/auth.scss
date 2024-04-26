@@ -1,0 +1,95 @@
+.login-page {
+    align-items: center;
+    background-image: url('/assets/img/background-login.jpg');
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    padding-left: 7%;
+    width: 100vw;
+    
+    .opacity-layer {
+      background-color: rgba(255, 255, 255, 50%);
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 0;
+    }
+  
+    .login-form {
+        background-color: #ffffff;
+        border: 1px solid #dbdbdb;
+        box-shadow: 0px 0px 2px 4px #dbdbdb47;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        height: 460px;
+        padding: 40px 30px;
+        width: 350px;
+        z-index: 1;
+  
+        .logo {
+          height: 60px;
+          margin: 0 auto 10px;
+          text-align: center;
+          width: auto;
+        }
+  
+        .logo-subtitle {
+            color: #000;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 6px 0 10px;
+            text-align: center;
+
+            &.light {
+              color: #949494;
+            }
+        }
+
+        .text-help-1 {
+          font-family: Poppins;
+          font-size: 12px;
+          margin-top: 20px;
+      }
+  
+        .recover_link {
+          color: var(--link-color);
+          cursor: pointer;
+          text-decoration: underline;
+          font-size: 12px;
+          margin: 40px 0 4px;
+          text-align: center;
+        }
+  
+        .stvInputContainer {
+            &.loader-box {
+              height: 36px;
+            }
+           
+        }
+
+        .input-wrapper {
+            width: 100%;
+            position: relative;
+
+            .input-wrapper__icon {
+              fill: #D9D9D9;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 24px;
+              position: absolute;
+              width: 24px;
+            }
+        }
+  
+        s-button {
+          margin: 20px auto 0;
+        }
+    
+    }
+  
+  }

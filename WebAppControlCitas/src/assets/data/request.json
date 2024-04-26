@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "requestDate": "2024-01-23T10:30:00",
+      "executionDate": "2024-01-23T10:30:00",
+      "client": "Empresa XYZ",
+      "project": "Construcción de Edificio A",
+      "requester": "Ing. Juan Pérez",
+      "servicesRR": [
+        "Recolección de residuos"
+      ],
+      "servicesSS": [
+        "Suministro de materiales de construcción"
+      ],
+      "status": "Programada"
+    },
+    {
+      "id": 2,
+      "requestDate": "2024-01-24T14:45:00",
+      "executionDate": "2024-01-23T10:30:00",
+      "client": "Constructora ABC",
+      "project": "Remodelación de Oficinas",
+      "requester": "Arq. María Gómez",
+      "servicesRR": [
+        "Recolección de residuos"
+      ],
+      "servicesSS": [
+        "Suministro de materiales de construcción"
+      ],
+      "status": "Inicial"
+    },
+    {
+      "id": 3,
+      "requestDate": "2024-01-25T09:15:00",
+      "executionDate": "2024-01-23T10:30:00",
+      "client": "Proyectos Urbanos SA",
+      "project": "Desarrollo Residencial",
+      "requester": "Lic. Ana Rodríguez",
+      "servicesRR": [
+        "Recolección de residuos"
+      ],
+      "servicesSS": [
+        "Suministro de materiales de construcción"
+      ],
+      "status": "En proceso"
+    },
+    {
+      "id": 4,
+      "requestDate": "2024-01-26T11:00:00",
+      "executionDate": "2024-01-23T10:30:00",
+      "client": "Inversiones ConstruyeBien",
+      "project": "Construcción de Viviendas",
+      "requester": "Ing. Pedro Hernández",
+      "servicesRR": [
+        "Recolección de residuos"
+      ],
+      "servicesSS": [
+        "Suministro de materiales de construcción"
+      ],
+      "status": "Programada"
+    },
+    {
+      "id": 5,
+      "requestDate": "2024-01-27T13:20:00",
+      "executionDate": "2024-01-23T10:30:00",
+      "client": "Obras Públicas Municipales",
+      "project": "Rehabilitación de Vías",
+      "requester": "Lic. Laura Gómez",
+      "servicesRR": [
+        "Recolección de residuos"
+      ],
+      "servicesSS": [
+        "Suministro de materiales de construcción"
+      ],
+      "status": "Cerrada"
+    }
+  ]
+  

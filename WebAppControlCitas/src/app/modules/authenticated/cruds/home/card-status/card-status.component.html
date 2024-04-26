@@ -1,0 +1,17 @@
+<div class="st-card-status">
+  <div class="st-card-status-cta" (click)="clickCTAHandler()" >
+    <svg class="asc">
+      <use xlink:href="#svg-add" />
+    </svg>
+    <span>{{title}}</span>
+  </div>
+  <div class="st-card-status-list">
+    <div class="st-card-status-item" *ngFor="let item of listItems; let i=index">
+      <span class="st-card-status-count">{{item.count}}</span>
+      <span class="st-card-status-text">{{item.text}}</span>
+      <div *ngIf="i !== 0" class="st-card-status-sep"></div>
+    </div>
+    
+  </div>
+  
+</div>

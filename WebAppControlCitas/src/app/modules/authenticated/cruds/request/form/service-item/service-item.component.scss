@@ -1,0 +1,93 @@
+.service-item {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+
+  .select {
+    flex: 1;
+  }
+  
+  .cantidad {
+    width: 62px;
+  }
+
+  .service-item-trash {
+    cursor: pointer;
+    height: 30px;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .service-item-edit {
+    cursor: pointer;
+    svg {
+      fill: #3d3d3d;
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+}
+
+.service-item-check {
+  align-items: center;
+  display: flex;
+  .service-item-check-select {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .service-item-check-qty {
+    width: 34px;
+    margin-left: 20px;
+  }
+
+  .service-item-check-actions {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    > * {
+      align-items: center;
+      display: flex;
+      height: 30px;
+    }
+
+    .service-item-status {
+      border-radius: 4px;
+      background: #E0B144;
+      color: black;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 2px 6px;
+    }
+
+    .service-item-link {
+      color: #00A3FF;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 21px;
+      text-decoration-line: underline;
+    }
+
+    .service-item-trash {
+      cursor: pointer;
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .service-item-edit {
+      cursor: pointer;
+      svg {
+        fill: #3d3d3d;
+        height: 28px;
+        width: 28px;
+      }
+    }
+  }
+
+}

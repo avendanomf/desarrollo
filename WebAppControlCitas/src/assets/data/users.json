@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "registrationDate": "2022-01-14",
+    "identificationNumber": "1036847963",
+    "name": "Carlos Betancurt",
+    "email": "carlos@colgravas.com",
+    "phone": "3102254648",
+    "status": "Activo",
+    "profiles": ["Administrador", "Asesor"]
+  },
+  {
+    "id": 2,
+    "registrationDate": "2022-02-25",
+    "identificationNumber": "987654321",
+    "name": "Ana Rodriguez",
+    "email": "ana@example.com",
+    "phone": "3123456789",
+    "status": "Activo",
+    "profiles": ["Asesor"]
+  },
+  {
+    "id": 3,
+    "registrationDate": "2022-03-10",
+    "identificationNumber": "876543210",
+    "name": "Juan Perez",
+    "email": "juan@example.com",
+    "phone": "3187654321",
+    "status": "Activo",
+    "profiles": ["Conductor"]
+  },
+  {
+    "id": 4,
+    "registrationDate": "2022-04-18",
+    "identificationNumber": "765432109",
+    "name": "Laura Gomez",
+    "email": "laura@example.com",
+    "phone": "3209876543",
+    "status": "Activo",
+    "profiles": ["Cliente"]
+  },
+  {
+    "id": 5,
+    "registrationDate": "2022-05-29",
+    "identificationNumber": "654321098",
+    "name": "Pedro Hernandez",
+    "email": "pedro@example.com",
+    "phone": "3223456789",
+    "status": "Activo",
+    "profiles": ["Conductor"]
+  },
+  {
+    "id": 6,
+    "registrationDate": "2022-06-15",
+    "identificationNumber": "543210987",
+    "name": "Sofia Ramirez",
+    "email": "sofia@example.com",
+    "phone": "3245678901",
+    "status": "Activo",
+    "profiles": ["Asesor"]
+  },
+  {
+    "id": 7,
+    "registrationDate": "2022-07-23",
+    "identificationNumber": "432109876",
+    "name": "Miguel Torres",
+    "email": "miguel@example.com",
+    "phone": "3267890123",
+    "status": "Activo",
+    "profiles": ["Cliente"]
+  },
+  {
+    "id": 8,
+    "registrationDate": "2022-08-30",
+    "identificationNumber": "321098765",
+    "name": "Elena Lopez",
+    "email": "elena@example.com",
+    "phone": "3289012345",
+    "status": "Activo",
+    "profiles": ["Asesor"]
+  },
+  {
+    "id": 9,
+    "registrationDate": "2022-09-14",
+    "identificationNumber": "210987654",
+    "name": "Daniel Sanchez",
+    "email": "daniel@example.com",
+    "phone": "3301234567",
+    "status": "Activo",
+    "profiles": ["Conductor"]
+  },
+  {
+    "id": 10,
+    "registrationDate": "2022-10-22",
+    "identificationNumber": "109876543",
+    "name": "Martha Rodriguez",
+    "email": "martha@example.com",
+    "phone": "3323456789",
+    "status": "Activo",
+    "profiles": ["Asesor"]
+  }
+]

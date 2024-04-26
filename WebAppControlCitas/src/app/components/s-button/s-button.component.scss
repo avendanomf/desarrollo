@@ -1,0 +1,21 @@
+button {
+    background-color: var(--primary-color-opaque);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px 36px;
+    transition: all ease-in-out 0.3s;
+    width: max-content;
+    &:focus {
+        background-color: var(--primary-color);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        outline: none;
+    }
+    &[disabled] {
+        background: #E9E9E9;
+        color: #939393;
+    }
+}

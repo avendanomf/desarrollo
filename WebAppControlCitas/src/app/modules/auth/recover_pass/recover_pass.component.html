@@ -1,0 +1,35 @@
+<app-splash [show]="loadSplash"></app-splash>
+
+<div class="login-page">
+  <div class="opacity-layer"></div>
+  <form class="login-form" onSubmit={handleSubmit(onSubmit)} >
+
+      <img src="/assets/img/colgravas.png" class="logo" />
+      <div class="logo-subtitle light">Ingresa tu nueva contraseña</div>
+      <div class="text-help-1">
+        Por favor, ingresa tu correo para recibir una nueva contraseña
+      </div>
+      <div class="formFields" *ngIf="load; then thenBlock else elseBlock ">
+
+      </div>
+      <ng-template #thenBlock>
+        <div class="stvInputContainer loader-box"></div>
+        <div class="stvInputContainer loader-box"></div>
+      </ng-template>
+
+      <ng-template #elseBlock>
+        <div class="input-wrapper">
+          <app-input-pass [(ngModel)]="password" (input)="formChange()" label="Nueva Contraseña"  placeholder="Escribe la contraseña" name="password"/>
+        </div>
+        <div class="input-wrapper">
+          <app-input-pass [(ngModel)]="password_confirm" (input)="formChange()" label="Confirmar Contraseña"  placeholder="Escribe la contraseña" name="password"/>
+        </div>
+
+      </ng-template>
+
+      <s-button (click)="recover()" [disabled]="load || formInvalid" type="button">Restablecer contraseña</s-button>
+
+  </form>
+</div>
+
+

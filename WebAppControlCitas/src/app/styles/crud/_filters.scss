@@ -1,0 +1,161 @@
+.crud-toolbar {
+    align-items: center;
+    display: flex;
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 12px;
+        width: max-content;
+        padding: 8px;
+        justify-content: space-around;
+        margin-right: auto;
+        align-items: center;
+        border-radius: var(--Border-frame1, 20px);
+        background: var(--Background-big-card, #FFF);
+
+        base-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 12px;
+            position: relative;
+            width: max-content;
+        }
+
+        .filters-search {
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+            .search {
+                display: flex;
+                width: 300px;
+                height: 40px;
+                padding: 8px 16px;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+                flex-shrink: 0;
+                outline: none;
+    
+                border-radius: var(--Border-button, 50px);
+                border: 1px solid var(--Background-Color-2, #949494);
+                background: var(--Background-Surface, #F7F7F7);
+                padding-right: 40px;
+
+                &:focus {
+                    border: 1px solid #333333;
+                }
+                /* Ajusta según el tamaño de la imagen */
+            }
+    
+            .search-icon {
+                position: absolute;
+                right: 8px;
+                cursor: pointer;
+            }
+        }
+        .select {
+            width: 300px;
+            height: 40px;
+            padding: 4px var(--spacing-sm, 8px);
+            gap: 10px;
+            border-radius: var(--Border-frame1, 20px);
+            background: var(--Background-Surface, #F7F7F7);
+            color: var(--Background-Black, #000);
+            text-align: center;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            .st-select-wrapper {
+                width: 100%;
+            }
+        }
+        
+        .clear-filters-btn {
+            align-items: center;
+            background-color:  #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            padding: 6px;
+            position: absolute;
+            right: -19px;
+            top: 50%;
+            transform: translateY(-50%) translateX(100%);
+            transition: all ease-in-out .2s;
+
+            svg {
+                fill: #949494;
+                height: 24px;
+                transition: all ease-in-out .2s;
+                width: 24px;
+            }
+            &:hover {
+                background-color:  #bebebe;
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    
+    .counter {
+        align-items: center;
+        border-radius: 16px;
+        background:  #FFF;
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+        height: 66px;
+        padding: 8px;
+        width: 100px;
+        justify-content: center;
+        .counter__label {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+        }
+        .counter__value {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+    .btn-new {
+        display: flex;
+        align-items: center;
+
+        .btn-new {
+            align-items: center;
+            background: var(--primary-color-opaque);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            gap: 8px;
+            height: 50px;
+            padding: 4px 8px;
+            width: 150px;
+            outline: none;
+            
+            .new-icon {
+                filter: invert(100%);
+            }
+
+            &:hover, &:active {
+                background: var(--primary-color);
+            }
+
+            span {
+                color: #FFF;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}

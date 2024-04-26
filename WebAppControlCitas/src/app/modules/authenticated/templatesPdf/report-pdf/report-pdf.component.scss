@@ -1,0 +1,73 @@
+:host {
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  overflow-x: hidden;
+  background-color: #f5f7ff;
+  padding: 20px;
+
+  .pdf-container {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 880px;
+    padding: 30px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    max-height: 80vh;
+    .pdf-content{
+      background: #fff;
+      border-radius: 10px;
+      padding: 50px;
+
+      // .pdf-sings {
+      //   .pdf-help-title {
+      //     margin-bottom: 26px;
+      //   }
+      //   .pdf-signs-content {
+      //     display: flex;
+      //     justify-content: space-between;
+          
+      //     .pdf-signs-item {
+    
+      //       .pdf-signs-item-user-info {
+      //         display: flex;
+      //         flex-direction: column;
+      //         justify-content: center;
+      //         .pdf-signs-item-user-info-item {
+      //           color: #000;
+      //           font-family: Poppins;
+      //           font-size: 14px;
+      //           span {
+      //             float: right;
+      //           }
+      //           strong {
+    
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+
+    }
+  }
+  .pdf-actions {
+    background: #f8f8f8;
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    width: 100%;
+    .download {
+      background: #2ad19d;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      height: 40px;
+      text-align: center;
+      font-weight: bold;
+      width: max-content;
+    }
+  }
+}

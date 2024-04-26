@@ -1,0 +1,134 @@
+<div class="crud-toolbar">
+    <div class="filters">
+        <div class="filters-search">
+            <input class="search" type="search" name="searchUser" placeholder="palabra clave">
+            <img class="search-icon" src="/assets/icons/search.svg" alt="">
+        </div>
+        <div class="selects">
+            <select class="select" name="perfil">
+                <option value="" Selected>Estado</option>
+                <option value="administrador">Activo</option>
+                <option value="asesor">Inactivo</option>
+            </select>
+        </div>
+    </div>
+    <div class="counter">
+        <span class="counter__label">N Parametros</span>
+        <span class="counter__value">100</span>
+    </div>
+    <div class="btn-new">
+        <button class="btn-new" (click)="create()" [disabled]="load">
+            <img class="new-icon" src="/assets/icons/add.svg" alt="">
+            <span>Nuevo</span>
+        </button>
+    </div>
+</div>
+<br>
+
+<div class="crud">
+
+    <div class="grid-header">
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Id</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Nombre del Parametro</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Categoria</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Valor</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Estado</span>
+                <div class="order-by-controls">
+                    <svg class="asc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                    <svg class="desc">
+                        <use xlink:href="#svg-chevron" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text"> </div>
+        </div>
+    </div>
+
+    <div class="grid-body" *ngFor="let item of listItems; index as i;">
+        <div class="grid-item-body">
+            <span class="body-item-name item-id" (click)="edit(item)">{{item.id}}</span>
+        </div>
+        <div class="grid-item-body">
+            <span class="body-item-name">{{item.name}}</span>
+        </div>
+        <div class="grid-item-body">
+            <span class="body-item-name">{{item.category}}</span>
+        </div>
+        <div class="grid-item-body">
+            <span class="body-item-name">{{item.value}}</span>
+        </div>
+        <div class="grid-item-body">
+            <div class="item-state">
+                <span class="body-item-name">{{item.status}}</span>
+            </div>
+        </div>
+        <div class="grid-item-body item-center actions-icons">
+            <div (click)="edit(item)">
+                <svg>
+                    <use xlink:href="#svg-pencil" />
+                </svg>
+            </div>
+            <div (click)="delete(item)">
+                <svg>
+                    <use xlink:href="#svg-trash" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-pager [currentPage]="2" [totalPages]="5" />

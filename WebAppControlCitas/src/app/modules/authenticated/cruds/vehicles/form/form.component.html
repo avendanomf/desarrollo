@@ -1,0 +1,204 @@
+<div class="baseDialog">
+  <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Vehiculo</div>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div class="formContent">
+      <ng-container class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></ng-container>
+    </div>
+  
+    <ng-template #thenBlock>
+
+      <div class="stvInputContainer">
+          <label>Placa</label>
+          <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Conductor</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>No tarjeta propiedad</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Número RTM</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Vencimiento RTM</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+          <label>Capacidad mt3</label>
+          <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Capacidad kg</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Capacidad kg</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+          <label>Pin</label>
+          <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Número SOAT</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>SOAT</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Técnico mecánica</label>
+        <div class="loader-box"></div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Tarjeta Propiedad</label>
+        <div class="loader-box"></div>
+      </div>
+
+    </ng-template>
+
+    <ng-template #elseBlock>
+
+      <div class="stvInputContainer">
+        <label>Placa</label>
+        <input type="text" formControlName="placa" placeholder="Escribe la placa">
+        <div class="error-text" *ngIf="form.get('placa')?.hasError('required')">
+            la placa es obligatoria.
+        </div>
+        <div class="error-text" *ngIf="form.get('placa')?.hasError('pattern')">
+          la placa debe ser de 6 digitos.
+        </div>
+      </div>
+      
+      <div class="stvInputContainer">
+        <label>Conductor</label>
+        <st-select formControlName="conductorId" position="fixed" [multiple]="false" [config]="{
+            placeholder: 'Selecciona',
+            moreText: 'más',
+            noResultsFound: 'Sin resultados',
+            displayKey: 'label',
+            searchPlaceholder: 'Buscar',
+            selectAllLabel: 'Seleccionar todo'
+        }" [options]="optionsList.drivers"/>
+        <div class="error-text" *ngIf="form.get('conductorId')?.hasError('required')">
+            El conductor es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>No tarjeta propiedad</label>
+        <input type="text" formControlName="noTarjetaPropiedad" placeholder="Escribe la tarjeta propiedad">
+        <div class="error-text" *ngIf="form.get('noTarjetaPropiedad')?.hasError('required')">
+            la tarjeta de propiedad es obligatoria.
+        </div>
+      </div>
+      
+      <div class="stvInputContainer">
+        <label>Número RTM</label>
+        <input type="text" formControlName="numeroRtm" placeholder="Escribe el número RTM">
+        <div class="error-text" *ngIf="form.get('numeroRtm')?.hasError('required')">
+          El número RTM es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Vencimiento RTM</label>
+        <input type="date" formControlName="vencimientoRtm" placeholder="Escribe la fecha de vencimiento RTM">
+        <div class="error-text" *ngIf="form.get('vencimientoRtm')?.hasError('required')">
+            la fecha de vencimiento es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Capacidad mt3</label>
+        <input type="number" formControlName="capacidadMt3" placeholder="Escribe la capacidad mt3">
+        <div class="error-text" *ngIf="form.get('capacidadMt3')?.hasError('required')">
+            La capacidad mt3 es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Capacidad kg</label>
+        <input type="number" formControlName="capacidadKg" placeholder="Escribe la capacidad kg">
+        <div class="error-text" *ngIf="form.get('capacidadKg')?.hasError('required')">
+            La capacidad kg es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Pin</label>
+        <input type="text" formControlName="pin" placeholder="Escribe el pin">
+        <div class="error-text" *ngIf="form.get('pin')?.hasError('required')">
+            El pin es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Número SOAT</label>
+        <input type="text" formControlName="numeroSoat" placeholder="Escribe el número SOAT">
+        <div class="error-text" *ngIf="form.get('numeroSoat')?.hasError('required')">
+          El número SOAT es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Vencimiento SOAT</label>
+        <input type="date" formControlName="vencimientoSoat" placeholder="Escribe la fecha de vencimiento SOAT">
+        <div class="error-text" *ngIf="form.get('vencimientoSoat')?.hasError('required')">
+            la fecha de vencimiento es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>SOAT</label>
+        <st-input-file [urlFile]="previewFiles.soat" formControlName="soat" accept="image/*,.pdf"></st-input-file>
+
+        <div class="error-text" *ngIf="form.get('soat')?.hasError('required')">
+            El SOAT es obligatorio.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Técnico mecánica</label>
+        <st-input-file [urlFile]="previewFiles.tecnicomecanica" formControlName="tecnicomecanica" accept="image/*,.pdf"></st-input-file>
+
+        <div class="error-text" *ngIf="form.get('tecnicomecanica')?.hasError('required')">
+            la técnico mecánica es obligatoria.
+        </div>
+      </div>
+
+      <div class="stvInputContainer">
+        <label>Tarjeta Propiedad</label>
+        <st-input-file [urlFile]="previewFiles.tarjetaPropiedad" formControlName="tarjetaPropiedad" accept="image/*,.pdf"></st-input-file>
+
+        <div class="error-text" *ngIf="form.get('tarjetaPropiedad')?.hasError('required')">
+            El tarjeta propiedad es obligatoria.
+        </div>
+      </div>
+
+    </ng-template>
+    
+    <div class="formActions">
+      <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+      <button class="secondary" type="button" (click)="close()">Cancelar</button>
+    </div>
+  </form>
+  
+</div>

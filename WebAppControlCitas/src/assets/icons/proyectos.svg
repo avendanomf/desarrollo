@@ -1,0 +1,10 @@
+<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="add_business">
+<mask id="mask0_518_100" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="41">
+<rect id="Bounding box" y="0.142822" width="40" height="40" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_518_100)">
+<path id="add_business_2" d="M30.124 37.6428V32.6257H25.124V30.5317H30.124V25.5317H32.218V30.5317H37.218V32.6257H32.218V37.6428H30.124ZM4.84418 33.0424V22.6984H2.78223V20.6045L4.65614 12.2263H28.6112L30.5129 20.7006V22.6984H28.468V28.8758H26.3741V22.6984H18.1198V33.0424H4.84418ZM6.93814 30.9485H16.0258V22.6984H6.93814V30.9485ZM4.65614 9.32022V7.22626H28.6283V9.32022H4.65614ZM4.89327 20.6045H28.419L27.0055 14.3202H6.30673L4.89327 20.6045Z" fill="#1C1B1F"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "registrationDate": "01-01-2023",
+      "plate": "ABC123",
+      "capacityM3": 10,
+      "pin": "1234",
+      "status": "Activo"
+    },
+    {
+      "id": 2,
+      "registrationDate": "02-01-2023",
+      "plate": "XYZ789",
+      "capacityM3": 15,
+      "pin": "5678",
+      "status": "Inactivo"
+    },
+    {
+      "id": 3,
+      "registrationDate": "03-01-2023",
+      "plate": "DEF456",
+      "capacityM3": 12,
+      "pin": "4321",
+      "status": "Activo"
+    },
+    {
+      "id": 4,
+      "registrationDate": "04-01-2023",
+      "plate": "GHI789",
+      "capacityM3": 20,
+      "pin": "8765",
+      "status": "Inactivo"
+    },
+    {
+      "id": 5,
+      "registrationDate": "05-01-2023",
+      "plate": "JKL012",
+      "capacityM3": 18,
+      "pin": "9876",
+      "status": "Pendiente"
+    }
+  ]
+  

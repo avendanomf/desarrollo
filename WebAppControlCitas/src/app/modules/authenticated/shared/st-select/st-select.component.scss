@@ -1,0 +1,37 @@
+.select-type-fixed {
+    .ngx-dropdown-list-container {
+        display: none;
+        &.content-fixed {
+            display: block;
+        }
+    }
+} 
+
+.ngx-dropdown-container .available-items {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.ngx-dropdown-container .ngx-dropdown-button {
+    background-color: #F7F7F7 !important;
+    border: 1px solid #F7F7F7 !important;
+    border-radius: 8px;
+    box-shadow: none;
+    color: #000;
+    font-size: 14px;
+    border: none;
+    min-height: 34px;
+    padding: 8px;
+    outline: none;
+    width: 100%;
+
+    .nsdicon-angle-down {
+        color: grey;
+        &::before {
+            height: 8px !important;
+            top: 5px !important;
+            width: 8px !important;
+        }
+    }
+}
+

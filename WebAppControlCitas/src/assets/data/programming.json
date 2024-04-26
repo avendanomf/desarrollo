@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "request": "SOL123",
+      "order": "ORD456",
+      "vehicle": "CAD123",
+      "driver": "Juan Pérez",
+      "start_date": "2022-01-14 08:00:00",
+      "end_date": "2022-01-15 17:30:00",
+      "observations": "Recogida de materiales de construcción.",
+      "status": "Terminado"
+    },
+    {
+      "id": 2,
+      "request": "SOL234",
+      "order": "ORD567",
+      "vehicle": "VAS890",
+      "driver": "María Gómez",
+      "start_date": "2022-02-25 09:15:00",
+      "end_date": "2022-02-26 18:45:00",
+      "observations": "Entrega de materiales a un sitio de construcción.",
+      "status": "En Proceso"
+    },
+    {
+      "id": 3,
+      "request": "SOL345",
+      "order": "ORD678",
+      "vehicle": "TDF901",
+      "driver": "Luis Torres",
+      "start_date": "2022-03-10 10:30:00",
+      "end_date": "2022-03-11 20:00:00",
+      "observations": "Transporte de escombros.",
+      "status": "Pendiente"
+    },
+    {
+      "id": 4,
+      "request": "SOL456",
+      "order": "ORD789",
+      "vehicle": "JEH012",
+      "driver": "Ana Rodríguez",
+      "start_date": "2022-04-18 11:45:00",
+      "end_date": "2022-04-19 21:15:00",
+      "observations": "Recogida de chatarra metálica.",
+      "status": "Terminado"
+    },
+    {
+      "id": 5,
+      "request": "SOL567",
+      "order": "ORD890",
+      "vehicle": "BSH123",
+      "driver": "Carlos Betancurt",
+      "start_date": "2022-05-29 13:00:00",
+      "end_date": "2022-05-30 22:30:00",
+      "observations": "Transporte de residuos plásticos.",
+      "status": "Cancelado"
+    }
+  ]
+  

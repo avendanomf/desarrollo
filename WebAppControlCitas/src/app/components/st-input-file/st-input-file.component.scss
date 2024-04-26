@@ -1,0 +1,49 @@
+.st-file-input-wrapper {
+  position: relative;
+  width: 100%;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  label {
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 34px;
+    justify-content: space-between;
+    padding: 8px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    span {
+      color: #c7c7c7;
+      font-size: 14px;
+      max-width: 250px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    svg {
+      fill: #727171;
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  .st-file-input-actions {
+    position: absolute;
+    right: 0;
+    transform: translateY(4px);
+    .file-action {
+      color: #0A99D6;
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      width: max-content;
+    }
+  }
+}

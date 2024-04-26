@@ -1,0 +1,22 @@
+<div class="pager">
+
+    <div class="next-page" *ngIf="currentPage > 1" (click)="prevPage()">
+        <svg class="prev">
+            <use xlink:href="#svg-chevron" />
+        </svg>
+        <span>Anterior</span>
+    </div>
+    <div class="current-page page-control">
+        {{currentPage}}
+    </div>
+    <div class="page-contector">de</div>
+    <div class="total-pages page-control">
+        {{totalPages}}
+    </div>
+    <div class="next-page" *ngIf="currentPage < totalPages" (click)="nextPage()">
+        <span>Siguiente</span>
+        <svg>
+            <use xlink:href="#svg-chevron" />
+        </svg>
+    </div>
+</div>
