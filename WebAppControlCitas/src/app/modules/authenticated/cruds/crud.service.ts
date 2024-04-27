@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { URL_BACKEND } from 'src/app/config/config';
-import { map , catchError } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
+import { URL_BACKEND } from 'src/app/config/config'
+import { map , catchError } from 'rxjs/operators'
 import { of } from 'rxjs';
 
 @Injectable({

@@ -204,7 +204,7 @@ export class HomeComponent {
       {
         label: 'Dataset 1',
         data: [30, 23, 12, 45, 65],
-        backgroundColor: ['#D9CFB9', '#C5C5C5', '#949494', '#E0B144'],
+        backgroundColor: ['#51abcb', '#C5C5C5', '#949494', '#E0B144'],
         borderRadius: 4
       }
     ]

@@ -1,9 +1,9 @@
 <div [class]="'dashboard-menu-wrapper ' +  (sidebarToggle ? 'sidebarFull' : 'sidebarMini') ">
 
   <div class='dashboard-menu'>
-    <img alt='logo' class='dashboard-menu-logo logo-sm' src='/assets/img/logo-texto.png'
+    <img alt='logo' class='dashboard-menu-logo logo-sm' src='/assets/img/ccm-logo.png'
       (click)="router.navigate(['home'])" />
-    <img alt='logo' class='dashboard-menu-logo logo-xs' src='/assets/img/colgravas.png'
+    <img alt='logo' class='dashboard-menu-logo logo-xs' src='/assets/img/ccm-logo.png'
       (click)="router.navigate(['home'])" />
 
     <div class='menu-container'>
@@ -17,6 +17,10 @@
       <a class="menu-element" routerLinkActive="is-active" routerLink="/users/">
         <img src="/assets/icons/usuarios.svg" alt="">
         <span>Usuarios</span>
+      </a>
+      <a class="menu-element" routerLinkActive="is-active" routerLink="/paciente/">
+        <img src="/assets/icons/usuarios.svg" alt="">
+        <span>Pacientes</span>
       </a>
     </div>
   </div>

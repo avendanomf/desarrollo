@@ -72,7 +72,7 @@
         }
 
         &:hover {
-            background-color: #D9CFB9;
+            background-color: #51abcb;
             border-radius: 20px;
         }
 
@@ -81,7 +81,7 @@
         }
 
         &.is-active {
-            background-color: #D9CFB9;
+            background-color: #51abcb;
             border-radius: 20px;
         }
       }
@@ -135,7 +135,7 @@
         }
 
         &:is(:hover, .is-active) {
-          background-color: #D9CFB9;
+          background-color: #51abcb;
           border-radius: 20px;
 
           .menu-dropdown-title {
