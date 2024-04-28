@@ -1,0 +1,47 @@
+version: "3.8"
+
+networks:
+  controlcitas-dev:
+    driver: bridge
+
+services:
+  postgres_image:
+    image: postgres
+    restart: always
+    ports:
+      - "5430:5430"
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+      - ./db/scripts.sql:/docker-entrypoint-initdb.d/scripts.sql
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123456789"
+      POSTGRES_DB: "postgres"
+
+  webapicontrolcitas:
+    build:
+      context: .
+      dockerfile: ./WebApiControlCitas/Dockerfile
+    image: webapicontrolcitas:latest
+    ports:
+      - "5106:5106"
+    networks:
+      - controlcitas-dev
+    environment:
+      - ConnectionStrings__DefaultConnection=host=149.50.136.71; port=5430; Database=controlcitasmedicas; Username=postgres; Password=123456789 
+      - ASPNETCORE_URLS=http://+:80
+
+  webappcontrolcitas:
+    build:
+      context: .
+      dockerfile: ./webappcontrolcitas/Dockerfile
+    image: webappcontrolcitas:latest
+    ports:
+      - "4200:4200"
+    environment:
+      - URL_API='http://149.50.136.71:5106/api/'
+    networks:
+      - controlcitas-dev
+
+volumes:
+  db_volume:

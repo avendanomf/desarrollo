@@ -158,3 +158,8 @@ C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCit
 C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\obj\Debug\net7.0\WebApiControlCitas.pdb
 C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\obj\Debug\net7.0\WebApiControlCitas.genruntimeconfig.cache
 C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\obj\Debug\net7.0\ref\WebApiControlCitas.dll
+C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\bin\Debug\net7.0\out\web.config
+C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\bin\Debug\net7.0\out\appsettings.Development.json
+C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\bin\Debug\net7.0\out\appsettings.json
+C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\bin\Debug\net7.0\out\WebApiControlCitas.deps.json
+C:\MFAB\Universidad\Semestre_8\Gerencia_de_proyectos\desarrollo\WebApiControlCitas\bin\Debug\net7.0\out\WebApiControlCitas.runtimeconfig.json

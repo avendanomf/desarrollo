@@ -1,0 +1,41 @@
+<div class="baseDialog">
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Turno</div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+        <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+
+        <ng-template #thenBlock>
+            <div class="stvInputContainer">
+                <label>Nombre del Turno</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Medico</label>
+                <div class="loader-box"></div>
+            </div>
+          
+        </ng-template>
+
+        <ng-template #elseBlock>
+            <div class="stvInputContainer">
+                <label>Nombre del Turno</label>
+                <input type="text" formControlName="nombreTurno" placeholder="Escribe el nombre del turno">
+                <div class="error-text" *ngIf="form.get('nombreTurno')?.hasError('required')">
+                    El Nombre es obligatorio.
+                </div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Medico</label>
+                <input type="text" formControlName="idMedico" placeholder="Escribe el Tid del MEdico">
+                <div class="error-text" *ngIf="form.get('idMedico')?.hasError('required')">
+                    El Medico es obligatorio.
+                </div>
+            </div>
+        </ng-template>
+
+        <div class="formActions">
+            <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+            <button class="secondary" type="button" (click)="close()">Cancelar</button>
+        </div>
+    </form>
+</div>

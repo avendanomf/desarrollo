@@ -85,7 +85,7 @@ namespace WebApiControlCitas.Controllers
                 }
 
                 existingTurno.NombreTurno = updateTurno.NombreTurno;
-                existingTurno.NombreMedico = updateTurno.NombreMedico;
+                existingTurno.IdMedico = updateTurno.IdMedico;
 
                 _db.SaveChanges();
                 return StatusCode(200, new { mensaje = "ok", response = existingTurno });

@@ -74,6 +74,7 @@ public partial class ControlcitasmedicasContext : DbContext
                 .HasComment("Fecha de la cita médica")
                 .HasColumnName("fecha_cita");
             entity.Property(e => e.HoraCita)
+                .HasMaxLength(20)
                 .HasComment("Hora de la cita médica")
                 .HasColumnName("hora_cita");
             entity.Property(e => e.IdMedico).HasColumnName("id_medico");
@@ -144,7 +145,9 @@ public partial class ControlcitasmedicasContext : DbContext
             entity.Property(e => e.Cargo)
                 .HasMaxLength(50)
                 .HasColumnName("cargo");
-            entity.Property(e => e.Celular).HasColumnName("celular");
+            entity.Property(e => e.Celular)
+                .HasMaxLength(20)
+                .HasColumnName("celular");
             entity.Property(e => e.Direccion)
                 .HasMaxLength(100)
                 .HasColumnName("direccion");
@@ -156,12 +159,14 @@ public partial class ControlcitasmedicasContext : DbContext
                 .HasMaxLength(100)
                 .HasComment("Nombre completo del médico")
                 .HasColumnName("nombre_completo");
-            entity.Property(e => e.NumeroIdentificacion).HasColumnName("numero_identificacion");
+            entity.Property(e => e.NumeroIdentificacion)
+                .HasMaxLength(20)
+                .HasColumnName("numero_identificacion");
             entity.Property(e => e.Sexo)
                 .HasMaxLength(10)
                 .HasColumnName("sexo");
             entity.Property(e => e.TipoIdentificacion)
-                .HasMaxLength(20)
+                .HasMaxLength(5)
                 .HasColumnName("tipo_identificacion");
         });
 
@@ -172,7 +177,9 @@ public partial class ControlcitasmedicasContext : DbContext
             entity.ToTable("tbl_paciente");
 
             entity.Property(e => e.IdPaciente).HasColumnName("id_paciente");
-            entity.Property(e => e.Celular).HasColumnName("celular");
+            entity.Property(e => e.Celular)
+                .HasMaxLength(20)
+                .HasColumnName("celular");
             entity.Property(e => e.Direccion)
                 .HasMaxLength(100)
                 .HasColumnName("direccion");
@@ -181,7 +188,9 @@ public partial class ControlcitasmedicasContext : DbContext
                 .HasMaxLength(100)
                 .HasComment("Nombre completo del paciente")
                 .HasColumnName("nombre_completo");
-            entity.Property(e => e.NumeroIdentificacion).HasColumnName("numero_identificacion");
+            entity.Property(e => e.NumeroIdentificacion)
+                .HasMaxLength(20)
+                .HasColumnName("numero_identificacion");
             entity.Property(e => e.Ocupacion)
                 .HasMaxLength(50)
                 .HasColumnName("ocupacion");
@@ -189,7 +198,7 @@ public partial class ControlcitasmedicasContext : DbContext
                 .HasMaxLength(10)
                 .HasColumnName("sexo");
             entity.Property(e => e.TipoIdentificacion)
-                .HasMaxLength(20)
+                .HasMaxLength(5)
                 .HasColumnName("tipo_identificacion");
         });
 
@@ -213,19 +222,16 @@ public partial class ControlcitasmedicasContext : DbContext
             entity.ToTable("tbl_turno");
 
             entity.Property(e => e.IdTurno).HasColumnName("id_turno");
-            entity.Property(e => e.NombreMedico)
-                .HasMaxLength(100)
-                .HasColumnName("nombre_medico");
+            entity.Property(e => e.IdMedico).HasColumnName("id_medico");
             entity.Property(e => e.NombreTurno)
                 .HasMaxLength(100)
                 .HasComment("Nombre del turno de atención")
                 .HasColumnName("nombre_turno");
 
-            entity.HasOne(d => d.NombreMedicoNavigation).WithMany(p => p.TblTurnos)
-                .HasPrincipalKey(p => p.NombreCompleto)
-                .HasForeignKey(d => d.NombreMedico)
+            entity.HasOne(d => d.IdMedicoNavigation).WithMany(p => p.TblTurnos)
+                .HasForeignKey(d => d.IdMedico)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("tbl_turno_nombre_medico_fkey");
+                .HasConstraintName("tbl_turno_id_medico_fkey");
         });
 
         modelBuilder.Entity<Usuario>(entity =>

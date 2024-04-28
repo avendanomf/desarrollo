@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { type FormGroup, Validators } from '@angular/forms'
 import { BaseForm } from '../../../base/baseForm'
-import { hasValue } from '../../../../../utils/validations'
 
 @Component({
   selector: 'app-form',
@@ -10,32 +9,43 @@ import { hasValue } from '../../../../../utils/validations'
 })
 export class FormPacienteComponent extends BaseForm {
   validators = Validators
-  optionsList = {
-    roles: []
-  }
+
 
   override path: string = 'paciente'
   override form: FormGroup = this.fb.group({
-    correo: ['', [Validators.required, Validators.email]],
-    fechaCreacion: ['', Validators.required],
-    contrasena: ['']
+    tipoIdentificacion: ['', Validators.required],
+    numeroIdentificacion: ['', Validators.required],
+    nombreCompleto: ['', Validators.required],
+    direccion: ['', Validators.required],
+    celular: ['', Validators.required],
+    ocupacion: ['', Validators.required],
+    sexo: ['', Validators.required]
   })
 
   override async setInstance(data: any): Promise<any> {
     this.form.patchValue({
-      correo: data.correo,
-      fechaCreacion: data.fechaCreacion,
-      contrasena: data.contrasena
+      idPaciente: data.idPaciente,
+      idUsuario: data.idUsuario,
+      tipoIdentificacion: data.tipoIdentificacion,
+      numeroIdentificacion: data.numeroIdentificacion,
+      nombreCompleto: data.nombreCompleto,
+      direccion: data.direccion,
+      celular: data.celular,
+      ocupacion: data.ocupacion,
+      sexo: data.sexo
     })
   }
-  
+
   override formatData(form: any): any {
     const formData: any = {
-      correo: form.correo,
-      fechaCreacion: form.fechaCreacion
-    }
-    if (hasValue(form.contrasena)) {
-      formData.contrasena = form.contrasena
+      idUsuario: form.idUsuario,
+      tipoIdentificacion: form.tipoIdentificacion,
+      numeroIdentificacion: form.numeroIdentificacion,
+      nombreCompleto: form.nombreCompleto,
+      direccion: form.direccion,
+      celular: form.celular,
+      ocupacion: form.ocupacion,
+      sexo: form.sexo
     }
     return formData
   }

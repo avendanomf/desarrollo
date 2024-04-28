@@ -1,0 +1,126 @@
+<div class="baseDialog">
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} MEdico</div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+        <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+
+        <ng-template #thenBlock>
+            <div class="stvInputContainer">
+                <label>Usuario</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Tipo Identificación</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Número Identificación</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Nombre Completo</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Dirección</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Celular</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Especialidad</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Cargo</label>
+                <div class="loader-box"></div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Sexo</label>
+                <div class="loader-box"></div>
+            </div>
+        </ng-template>
+
+        <ng-template #elseBlock>
+            <div class="stvInputContainer">
+                <label>Usuario</label>
+                <input type="text" formControlName="idUsuario" placeholder="Escribe el Tipo Identificación">
+                <div class="error-text" *ngIf="form.get('idUsuario')?.hasError('required')">
+                    El Usuario es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Tipo Identificación</label>
+                <input type="text" formControlName="tipoIdentificacion" placeholder="Escribe el Tipo Identificación">
+                <div class="error-text" *ngIf="form.get('tipoIdentificacion')?.hasError('required')">
+                    El Tipo Identificación es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Número Identificación</label>
+                <input type="text" formControlName="numeroIdentificacion" placeholder="Escribe el Número Identificación">
+                <div class="error-text" *ngIf="form.get('numeroIdentificacion')?.hasError('required')">
+                    El Número Identificación es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Nombre Completo</label>
+                <input type="text" formControlName="nombreCompleto" placeholder="Escribe el Nombre Completo">
+                <div class="error-text" *ngIf="form.get('nombreCompleto')?.hasError('required')">
+                    El Nombre Completo es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Dirección</label>
+                <input type="text" formControlName="direccion" placeholder="Escribe la Dirección">
+                <div class="error-text" *ngIf="form.get('direccion')?.hasError('required')">
+                    La Dirección es obligatoria.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Celular</label>
+                <input type="text" formControlName="celular" placeholder="Escribe el Celular">
+                <div class="error-text" *ngIf="form.get('celular')?.hasError('required')">
+                    El Celular es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Especialidad</label>
+                <input type="text" formControlName="especialidad" placeholder="Escribe la Ocupación">
+                <div class="error-text" *ngIf="form.get('especialidad')?.hasError('required')">
+                    La Especialidad es obligatoria.
+                </div>
+            </div>
+            
+            <div class="stvInputContainer">
+                <label>Cargo</label>
+                <input type="text" formControlName="cargo" placeholder="Escribe la Ocupación">
+                <div class="error-text" *ngIf="form.get('cargo')?.hasError('required')">
+                    El Cargo es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Sexo</label>
+                <input type="text" formControlName="sexo" placeholder="Escribe el Sexo">
+                <div class="error-text" *ngIf="form.get('sexo')?.hasError('required')">
+                    El Sexo es obligatorio.
+                </div>
+            </div>
+           
+        </ng-template>
+
+        <div class="formActions">
+            <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+            <button class="secondary" type="button" (click)="close()">Cancelar</button>
+        </div>
+    </form>
+</div>

@@ -153,6 +153,7 @@ export class BaseCrud implements OnInit {
     this.http.get<any[]>(`${URL_API}${this.path}`).subscribe(
       {
         next: (data: any) => {
+          console.log(data.response)
           this.listItems = data.response
           this.totalPages = data.response.totalPages === 0 ? 1 : data.response.totalPages
           this.countItems = data.response.totalRecords

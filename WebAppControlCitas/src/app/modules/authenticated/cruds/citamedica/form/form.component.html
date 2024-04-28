@@ -1,0 +1,71 @@
+<div class="baseDialog">
+    <div class="formTitle">{{ hasInstance ? 'Actualizar' : 'Crear' }} Cita Médica</div>
+    <form [formGroup]="form" (ngSubmit)="save()">
+
+        <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
+
+        <ng-template #thenBlock>
+            <div class="stvInputContainer">
+                <label>Identificador de Paciente</label>
+                <div class="loader-box"></div>
+            </div>
+        </ng-template>
+
+        <ng-template #elseBlock>
+
+            <div class="stvInputContainer">
+                <label>Identificador de Paciente</label>
+                <input type="text" formControlName="idPaciente" placeholder="Escribe el Identificador de Paciente">
+                <div class="error-text" *ngIf="form.get('idPaciente')?.hasError('required')">
+                    El Identificador de Paciente es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Identificador de Médico</label>
+                <input type="text" formControlName="idMedico" placeholder="Escribe el Identificador de Médico">
+                <div class="error-text" *ngIf="form.get('idMedico')?.hasError('required')">
+                    El Identificador de Médico es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Identificador de Turno</label>
+                <input type="text" formControlName="idTurno" placeholder="Escribe el Identificador de Turno">
+                <div class="error-text" *ngIf="form.get('idTurno')?.hasError('required')">
+                    El Identificador de Turno es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Identificador de Servicio</label>
+                <input type="text" formControlName="idServicio" placeholder="Escribe el Identificador de Servicio">
+                <div class="error-text" *ngIf="form.get('idServicio')?.hasError('required')">
+                    El Identificador de Servicio es obligatorio.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Fecha de Cita</label>
+                <input type="text" formControlName="fechaCita" placeholder="Escribe la Fecha de Cita">
+                <div class="error-text" *ngIf="form.get('fechaCita')?.hasError('required')">
+                    La Fecha de Cita es obligatoria.
+                </div>
+            </div>
+
+            <div class="stvInputContainer">
+                <label>Hora de Cita</label>
+                <input type="text" formControlName="horaCita" placeholder="Escribe la Hora de Cita">
+                <div class="error-text" *ngIf="form.get('horaCita')?.hasError('required')">
+                    La Hora de Cita es obligatoria.
+                </div>
+            </div>
+            
+        </ng-template>
+
+        <div class="formActions">
+            <button class="primary" type="submit" [disabled]="form.invalid">Guardar</button>
+            <button class="secondary" type="button" (click)="close()">Cancelar</button>
+        </div>
+    </form>
+</div>

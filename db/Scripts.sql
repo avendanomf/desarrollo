@@ -1,4 +1,6 @@
---CREATE DATABASE IF NOT EXISTS ControlCitasMedicas;
+CREATE DATABASE IF NOT EXISTS ControlCitasMedicas;
+
+\c ControlCitasMedicas;
 
 CREATE TABLE usuarios (
     id_usuario SERIAL PRIMARY KEY,
@@ -35,7 +37,7 @@ CREATE TABLE TBL_Medico (
     Id_Medico SERIAL PRIMARY KEY,
 	id_usuario INT,
     Tipo_Identificacion VARCHAR(5) NOT NULL,
-    Numero_Identificacion VARCHAR(20 NOT NULL,
+    Numero_Identificacion VARCHAR(20) NOT NULL,
     Nombre_Completo VARCHAR(100) NOT NULL,
     Direccion VARCHAR(100) NOT NULL,
     Celular VARCHAR(20) NOT NULL,
@@ -56,8 +58,8 @@ CREATE TABLE TBL_Servicio (
 CREATE TABLE TBL_Turno (
     Id_Turno SERIAL PRIMARY KEY,
     Nombre_Turno VARCHAR(100),
-    Nombre_Medico VARCHAR(100) NOT NULL,
-    FOREIGN KEY (Nombre_Medico) REFERENCES TBL_Medico (Nombre_Completo)
+    Id_Medico INT NOT NULL,
+    FOREIGN KEY (Id_Medico) REFERENCES TBL_Medico (Id_Medico)
 );
 
 -- Crear la tabla TBL_Cita_Medica
@@ -68,7 +70,7 @@ CREATE TABLE TBL_Cita_Medica (
     Id_Turno INT NOT NULL,
     Id_Servicio INT NOT NULL,
     Fecha_Cita DATE NOT NULL,
-    Hora_Cita TIME NOT NULL,
+    Hora_Cita VARCHAR(20) NOT NULL,
     FOREIGN KEY (Id_Paciente) REFERENCES TBL_Paciente (Id_Paciente),
     FOREIGN KEY (Id_Medico) REFERENCES TBL_Medico (Id_Medico),
     FOREIGN KEY (Id_Turno) REFERENCES TBL_Turno (Id_Turno),
@@ -97,3 +99,6 @@ COMMENT ON COLUMN TBL_Cita_Medica.Hora_Cita IS 'Hora de la cita médica';
 COMMENT ON COLUMN TBL_Historia_Clinica.Fecha_Atencion IS 'Fecha de atención de la historia clínica';
 COMMENT ON COLUMN TBL_Historia_Clinica.Hora_Atencion IS 'Hora de atención de la historia clínica';
 COMMENT ON COLUMN TBL_Historia_Clinica.Observaciones IS 'Observaciones en la historia clínica';
+
+
+Insert into usuarios values(1,'correo@correo.com','12345','2024-01-01')

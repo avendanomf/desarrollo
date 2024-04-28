@@ -11,7 +11,7 @@ public partial class TblPaciente
 
     public string TipoIdentificacion { get; set; } = null!;
 
-    public int NumeroIdentificacion { get; set; }
+    public string NumeroIdentificacion { get; set; } = null!;
 
     /// <summary>
     /// Nombre completo del paciente
@@ -20,7 +20,7 @@ public partial class TblPaciente
 
     public string Direccion { get; set; } = null!;
 
-    public int Celular { get; set; }
+    public string Celular { get; set; } = null!;
 
     public string Ocupacion { get; set; } = null!;
 

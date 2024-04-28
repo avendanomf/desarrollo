@@ -23,13 +23,13 @@ public partial class TblCitaMedica
     /// <summary>
     /// Hora de la cita médica
     /// </summary>
-    public TimeOnly HoraCita { get; set; }
+    public string HoraCita { get; set; } = null!;
 
-    public virtual TblMedico IdMedicoNavigation { get; set; } = null!;
+    public virtual TblMedico? IdMedicoNavigation { get; set; } = null!;
 
-    public virtual TblPaciente IdPacienteNavigation { get; set; } = null!;
+    public virtual TblPaciente? IdPacienteNavigation { get; set; } = null!;
 
-    public virtual TblServicio IdServicioNavigation { get; set; } = null!;
+    public virtual TblServicio? IdServicioNavigation { get; set; } = null!;
 
-    public virtual TblTurno IdTurnoNavigation { get; set; } = null!;
+    public virtual TblTurno? IdTurnoNavigation { get; set; } = null!;
 }

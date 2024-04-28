@@ -49,7 +49,7 @@ namespace WebApiControlCitas.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostCitaMedica([FromBody] TblCitaMedica newCitaMedica)
+        public IActionResult PostCitaMedica([FromBody] TblCitaMedica? newCitaMedica)
         {
             try
             {

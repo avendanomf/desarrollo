@@ -4,6 +4,11 @@ import { AuthenticatedComponent } from './authenticated.component'
 import { HomeComponent } from './cruds/home/home.component'
 import { UsersComponent } from './cruds/users/users.component'
 import { PacienteComponent } from './cruds/paciente/paciente.component'
+import { MedicoComponent } from './cruds/medico/medico.component'
+import { CitaMedicaComponent } from './cruds/citamedica/citamedica.component'
+import { ServicioComponent } from './cruds/servicio/servicio.component'
+import { TurnoComponent } from './cruds/turno/turno.component'
+import { HistoriaClinicaComponent } from './cruds/historiaclinica/historiaclinica.component'
 
 const routes: Routes = [
   {
@@ -30,6 +35,26 @@ const routes: Routes = [
       {
         path: 'paciente',
         component: PacienteComponent
+      },
+      {
+        path: 'medico',
+        component: MedicoComponent
+      },
+      {
+        path: 'citamedica',
+        component: CitaMedicaComponent
+      },
+      {
+        path: 'servicio',
+        component: ServicioComponent
+      },
+      {
+        path: 'turno',
+        component: TurnoComponent
+      },
+      {
+        path: 'historiaclinica',
+        component: HistoriaClinicaComponent
       }
     ]
   }

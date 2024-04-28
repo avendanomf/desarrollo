@@ -1,0 +1,69 @@
+<!-- app-users.component.html -->
+<div class="crud-toolbar">
+    <div class="filters">
+        <!-- Aquí irían los filtros si los tienes -->
+    </div>
+
+    <div class="btn-new">
+        <button class="btn-new" (click)="create()" [disabled]="load">
+            <img class="new-icon" src="/assets/icons/add.svg" alt="">
+            <span>Nuevo</span>
+        </button>
+    </div>
+</div>
+<br>
+
+<div class="crud" #crud>
+    <div class="grid-header">
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Id</span>
+                <div class="order-by-controls">
+                    <!-- Aquí irían los controles de ordenamiento si los tienes -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Servicio</span>
+                <div class="order-by-controls">
+                </div>
+            </div>
+        </div>
+              <div class="grid-item-header">
+            <div class="grid-item-header__text"> </div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="load; then thenBlock else elseBlock "></ng-container>
+
+    <ng-template #thenBlock>
+        <div class="grid-body loader-list" *ngIf="widthCrud > 0">
+            <div class="loader-box" [style.width]="widthCrud + 'px'"></div>
+        </div>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <div class="grid-body" *ngFor="let item of listItems; index as i;">
+            <div class="grid-item-body">
+                <span class="body-item-name item-id" (click)="edit(item)">{{item.idServicio}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.nombreServicio}}</span>
+            </div>            
+            <div class="grid-item-body item-center actions-icons">
+                <div (click)="edit(item)">
+                    <svg>
+                        <use xlink:href="#svg-pencil" />
+                    </svg>
+                </div>
+                <div (click)="deleteHandler(item)">
+                    <svg>
+                        <use xlink:href="#svg-trash" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+

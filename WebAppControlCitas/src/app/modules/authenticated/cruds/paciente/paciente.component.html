@@ -1,6 +1,7 @@
+<!-- app-users.component.html -->
 <div class="crud-toolbar">
     <div class="filters">
-        <base-filters [filtersList]="filters" (clearFilters)="clearFilters()" (changeFilters)="changeFiltersHandler($event)" />
+        <!-- Aquí irían los filtros si los tienes -->
     </div>
 
     <div class="btn-new">
@@ -13,46 +14,81 @@
 <br>
 
 <div class="crud" #crud>
-    <div class="grid-header" >
+    <div class="grid-header">
         <div class="grid-item-header">
             <div class="grid-item-header__text">
                 <span>Id</span>
                 <div class="order-by-controls">
-                    <svg class="asc" (click)="changeOrder('=id')">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
-                    <svg class="desc" (click)="changeOrder('=-id')">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
+                    <!-- Aquí irían los controles de ordenamiento si los tienes -->
                 </div>
             </div>
         </div>
         <div class="grid-item-header">
             <div class="grid-item-header__text">
-                <span>correo</span>
+                <span>Usuario</span>
                 <div class="order-by-controls">
-                    <svg class="asc">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
-                    <svg class="desc">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
+                    <!-- Aquí irían los controles de ordenamiento si los tienes -->
                 </div>
             </div>
         </div>
         <div class="grid-item-header">
             <div class="grid-item-header__text">
-                <span>fecha Creacion</span>
+                <span>Tipo Identificación</span>
                 <div class="order-by-controls">
-                    <svg class="asc">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
-                    <svg class="desc">
-                        <use xlink:href="#svg-chevron" />
-                    </svg>
+                    <!-- Controles de ordenamiento -->
                 </div>
             </div>
-        </div>       
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Número Identificación</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Nombre Completo</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Dirección</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Celular</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Ocupación</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-header">
+            <div class="grid-item-header__text">
+                <span>Sexo</span>
+                <div class="order-by-controls">
+                    <!-- Controles de ordenamiento -->
+                </div>
+            </div>
+        </div>
+        <!-- Agrega más columnas según sea necesario -->
+
         <div class="grid-item-header">
             <div class="grid-item-header__text"> </div>
         </div>
@@ -69,14 +105,34 @@
     <ng-template #elseBlock>
         <div class="grid-body" *ngFor="let item of listItems; index as i;">
             <div class="grid-item-body">
+                <span class="body-item-name item-id" (click)="edit(item)">{{item.idPaciente}}</span>
+            </div>
+            <div class="grid-item-body">
                 <span class="body-item-name item-id" (click)="edit(item)">{{item.idUsuario}}</span>
             </div>
             <div class="grid-item-body">
-                <span class="body-item-name">{{item.correo}}</span>
+                <span class="body-item-name">{{item.tipoIdentificacion}}</span>
             </div>
             <div class="grid-item-body">
-                <span class="body-item-name">{{item.fechaCreacion}}</span>
-            </div>           
+                <span class="body-item-name">{{item.numeroIdentificacion}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.nombreCompleto}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.direccion}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.celular}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.ocupacion}}</span>
+            </div>
+            <div class="grid-item-body">
+                <span class="body-item-name">{{item.sexo}}</span>
+            </div>
+            <!-- Agrega más columnas según sea necesario -->
+
             <div class="grid-item-body item-center actions-icons">
                 <div (click)="edit(item)">
                     <svg>
@@ -91,33 +147,5 @@
             </div>
         </div>
     </ng-template>
-
 </div>
 
-<app-pager [currentPage]="currentPage" [totalPages]="totalPages" (changePage)="changePageHandler($event)"/>
-
-<stv-modal [show]="infoAlert">
-    <div class="alert">
-        <img class="alert__image" src="/assets/img/check_circle.svg" />
-        <div class="alert__title">Usuario  {{ hasInstance ? 'actualizado': 'creado' }}</div>
-        <div class="alert__content">El usuario se ha {{ hasInstance ? 'actualizado': 'creado' }} correctamente</div>
-        <s-button (click)="closeAlert('infoAlert')" type="button">Aceptar</s-button>
-    </div>
-</stv-modal>
-
-<stv-modal [show]="deleteAlert">
-    <div class="alert">
-        <img class="alert__image" src="/assets/img/check_circle.svg" />
-        <div class="alert__title">Eliminado exitosamente</div>
-        <s-button (click)="closeAlert('deleteAlert')" type="button">Aceptar</s-button>
-    </div>
-</stv-modal>
-
-<stv-modal [show]="errorAlert">
-    <div class="alert">
-        <img class="alert__image" src="/assets/img/cancel.svg" />
-        <div class="alert__title">Error</div>
-        <div class="alert__content">{{errorText}}</div>
-        <s-button (click)="closeAlert('errorAlert')" type="button">Aceptar</s-button>
-    </div>
-</stv-modal>

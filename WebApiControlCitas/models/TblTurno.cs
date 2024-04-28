@@ -12,9 +12,9 @@ public partial class TblTurno
     /// </summary>
     public string? NombreTurno { get; set; }
 
-    public string NombreMedico { get; set; } = null!;
+    public int IdMedico { get; set; }
 
-    public virtual TblMedico NombreMedicoNavigation { get; set; } = null!;
+    public virtual TblMedico? IdMedicoNavigation { get; set; } = null!;
 
-    public virtual ICollection<TblCitaMedica> TblCitaMedicas { get; set; } = new List<TblCitaMedica>();
+    public virtual ICollection<TblCitaMedica>? TblCitaMedicas { get; set; } = new List<TblCitaMedica>();
 }
