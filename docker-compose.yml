@@ -29,7 +29,7 @@ services:
       - controlcitas-dev
     environment:
       - ConnectionStrings__DefaultConnection=host=149.50.136.71; port=5430; Database=controlcitasmedicas; Username=postgres; Password=123456789 
-      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_URLS=http://+:4200
 
   webappcontrolcitas:
     build:
