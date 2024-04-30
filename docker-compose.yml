@@ -34,7 +34,7 @@ services:
   webappcontrolcitas:
     build:
       context: .
-      dockerfile: ./webappcontrolcitas/Dockerfile
+      dockerfile: ./WebAppControlCitas/Dockerfile
     image: webappcontrolcitas:latest
     ports:
       - "81:80"
