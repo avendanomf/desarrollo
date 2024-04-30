@@ -1,5 +1,5 @@
 <div class="baseDialog">
-    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Paciente</div>
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Servicio</div>
     <form [formGroup]="form" (ngSubmit)="save()">
 
         <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>

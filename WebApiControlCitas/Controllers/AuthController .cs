@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using WebApiControlCitas.models;
 using System.Linq;
 using WebApiControlCitas.Entities;
+using Microsoft.AspNetCore.Cors;
 
 namespace WebApiControlCitas.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("ReglasCors")]
     public class AuthController : ControllerBase
     {
         private readonly ControlcitasmedicasContext _db;

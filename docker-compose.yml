@@ -9,7 +9,7 @@ services:
     image: postgres
     restart: always
     ports:
-      - "5430:5430"
+      - "5432:5432"
     volumes:
       - db_volume:/var/lib/postgresql/data
       - ./db/scripts.sql:/docker-entrypoint-initdb.d/scripts.sql
@@ -24,12 +24,12 @@ services:
       dockerfile: ./WebApiControlCitas/Dockerfile
     image: webapicontrolcitas:latest
     ports:
-      - "5106:5106"
+      - "8089:8089"
     networks:
       - controlcitas-dev
     environment:
       - ConnectionStrings__DefaultConnection=host=149.50.136.71; port=5430; Database=controlcitasmedicas; Username=postgres; Password=123456789 
-      - ASPNETCORE_URLS=http://+:4200
+      - ASPNETCORE_URLS=http://+:8089
 
   webappcontrolcitas:
     build:
@@ -37,7 +37,7 @@ services:
       dockerfile: ./webappcontrolcitas/Dockerfile
     image: webappcontrolcitas:latest
     ports:
-      - "4200:4200"
+      - "81:80"
     environment:
       - URL_API='http://149.50.136.71:5106/api/'
     networks:

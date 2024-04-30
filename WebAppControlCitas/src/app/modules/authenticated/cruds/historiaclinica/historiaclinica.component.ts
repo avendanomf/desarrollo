@@ -10,8 +10,8 @@ import { ComponentType } from '@angular/cdk/overlay'
   styleUrl: './historiaclinica.component.scss'
 })
 export class HistoriaClinicaComponent extends BaseCrud {
-  override path: string = 'turno'
-  override idField: string = 'idTurno'
+  override path: string = 'HistoriaClinica'
+  override idField: string = 'idHistoria'
 
   override formDialogComponent: ComponentType<BaseForm> = FormHistoriaClinicaComponent
 
@@ -26,6 +26,6 @@ export class HistoriaClinicaComponent extends BaseCrud {
   ]
 
   deleteHandler(item: any): void {
-    this.delete('Eliminar Historia Clinica', `Estas seguro de eliminar la Historia Clinica "${item.idTurno}"`, item)
+    this.delete('Eliminar Historia Clinica', `Estas seguro de eliminar la Historia Clinica con ID  "${item.idHistoria}"`, item)
   }
 }

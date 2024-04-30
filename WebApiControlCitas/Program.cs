@@ -33,7 +33,14 @@ builder.Services.AddDbContext<ControlcitasmedicasContext>(options =>
     options.UseNpgsql(conn);
 });
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "ControlCitasMedicasWebApi", Version = "v1" });
+});
 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var misReglasCors = "ReglasCors";
 builder.Services.AddCors(opt =>
@@ -50,17 +57,16 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+   {
+       c.SwaggerEndpoint("/swagger/v1/swagger.json", "NoColgravasWepApi V1");
+   });
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseCors(misReglasCors);
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

@@ -26,6 +26,6 @@ export class TurnoComponent extends BaseCrud {
   ]
 
   deleteHandler(item: any): void {
-    this.delete('Eliminar Turno', `Estas seguro de eliminar el turno "${item.idTurno}"`, item)
+    this.delete('Eliminar Turno', `Estas seguro de eliminar el turno "${item.nombreTurno}"`, item)
   }
 }

@@ -1,6 +1,18 @@
-CREATE DATABASE IF NOT EXISTS ControlCitasMedicas;
+\c postgres;
 
-\c ControlCitasMedicas;
+CREATE DATABASE controlcitasmedicas
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'en_US.utf8'
+    LC_CTYPE = 'en_US.utf8'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+\c controlcitasmedicas;
+
 
 CREATE TABLE usuarios (
     id_usuario SERIAL PRIMARY KEY,
@@ -83,7 +95,7 @@ CREATE TABLE TBL_Historia_Clinica (
     Id_Paciente INT NOT NULL,
     Id_Medico INT NOT NULL,
     Fecha_Atencion DATE NOT NULL,
-    Hora_Atencion TIME NOT NULL,
+    Hora_Atencion varchar(20) NOT NULL,
     Observaciones TEXT NOT NULL,
     FOREIGN KEY (Id_Paciente) REFERENCES TBL_Paciente (Id_Paciente),
     FOREIGN KEY (Id_Medico) REFERENCES TBL_Medico (Id_Medico)

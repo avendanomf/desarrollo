@@ -26,6 +26,6 @@ export class PacienteComponent extends BaseCrud {
   ]
 
   deleteHandler(item: any): void {
-    this.delete('Eliminar Paciente', `Estas seguro de eliminar el paciente "${item.nombres}"`, item)
+    this.delete('Eliminar Paciente', `Estas seguro de eliminar el paciente "${item.nombreCompleto}"`, item)
   }
 }

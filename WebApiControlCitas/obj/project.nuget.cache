@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qABzTtv2uH1BggVRxjiMYTW9LInzhrRhydks5gwvVBBxaSRniAV4N8VpB2gDLoSDy+sR9GejKxEpGGE2SD/fOA==",
+  "dgSpecHash": "Tkalw1juHMDyFbPL9pc+CIYhZmIrydp/sdXLbvmwcQkxdgrXAUwVR++6HOGciFDNhWyaXD0bFVfdUZIh4KDHlw==",
   "success": true,
-  "projectFilePath": "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
+  "projectFilePath": "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FamiliaAvendañoGomez\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\FamiliaAvendañoGomez\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj": {}
+    "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj": {}
   },
   "projects": {
-    "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj": {
+    "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
+        "projectUniqueName": "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
         "projectName": "WebApiControlCitas",
-        "projectPath": "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
+        "projectPath": "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\WebApiControlCitas.csproj",
         "packagesPath": "C:\\Users\\FamiliaAvendañoGomez\\.nuget\\packages\\",
-        "outputPath": "C:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\obj\\",
+        "outputPath": "c:\\MFAB\\Universidad\\Semestre_8\\Gerencia_de_proyectos\\desarrollo\\WebApiControlCitas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FamiliaAvendañoGomez\\AppData\\Roaming\\NuGet\\NuGet.Config",

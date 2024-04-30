@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using WebApiControlCitas.models;
 using System;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 
 namespace WebApiControlCitas.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class HistoriaClinicaController : ControllerBase
+    [EnableCors("ReglasCors")]
+        public class HistoriaClinicaController : ControllerBase
     {
         private readonly ControlcitasmedicasContext _db;
 

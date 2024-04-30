@@ -26,6 +26,6 @@ export class ServicioComponent extends BaseCrud {
   ]
 
   deleteHandler(item: any): void {
-    this.delete('Eliminar servicio', `Estas seguro de eliminar el servicio "${item.idServicio}"`, item)
+    this.delete('Eliminar servicio', `Estas seguro de eliminar el servicio "${item.nombreServicio}"`, item)
   }
 }

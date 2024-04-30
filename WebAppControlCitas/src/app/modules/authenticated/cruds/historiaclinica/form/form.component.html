@@ -1,12 +1,12 @@
 <div class="baseDialog">
-    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Turno</div>
+    <div class="formTitle">{{hasInstance ? 'Actualizar' : 'Crear'}} Historia Clinica</div>
     <form [formGroup]="form" (ngSubmit)="save()">
 
         <div class="formContent" *ngIf="isLoad; then thenBlock else elseBlock "></div>
 
         <ng-template #thenBlock>
             <div class="stvInputContainer">
-                <label>Nombre del Turno</label>
+                <label>Paciente</label>
                 <div class="loader-box"></div>
             </div>
             <div class="stvInputContainer">
@@ -18,17 +18,38 @@
 
         <ng-template #elseBlock>
             <div class="stvInputContainer">
-                <label>Nombre del Turno</label>
-                <input type="text" formControlName="nombreTurno" placeholder="Escribe el nombre del turno">
-                <div class="error-text" *ngIf="form.get('nombreTurno')?.hasError('required')">
-                    El Nombre es obligatorio.
+                <label>Paciente</label>
+                <input type="text" formControlName="idPaciente" placeholder="Escribe id del paciente">
+                <div class="error-text" *ngIf="form.get('idPaciente')?.hasError('required')">
+                    El Paciente es obligatorio.
                 </div>
             </div>
             <div class="stvInputContainer">
                 <label>Medico</label>
-                <input type="text" formControlName="idMedico" placeholder="Escribe el Tid del MEdico">
+                <input type="text" formControlName="idMedico" placeholder="Escribe el Tid del Medico">
                 <div class="error-text" *ngIf="form.get('idMedico')?.hasError('required')">
                     El Medico es obligatorio.
+                </div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Fecha de atenciòn</label>
+                <input type="text" formControlName="fechaAtencion" placeholder="Escribe la fecha de atenciòn">
+                <div class="error-text" *ngIf="form.get('fechaAtencion')?.hasError('required')">
+                    La fecha de atenciòn es obligatoria.
+                </div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Hora de atenciòn</label>
+                <input type="text" formControlName="horaAtencion" placeholder="Escribe la hora de atenciòn">
+                <div class="error-text" *ngIf="form.get('horaAtencion')?.hasError('required')">
+                    La hora de atenciòn es obligatoria.
+                </div>
+            </div>
+            <div class="stvInputContainer">
+                <label>Observaciones</label>
+                <input type="textarea" formControlName="observaciones" placeholder="Escribe las observaciones">
+                <div class="error-text" *ngIf="form.get('observaciones')?.hasError('required')">
+                    Las observaciones son obligatorias.
                 </div>
             </div>
         </ng-template>

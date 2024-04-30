@@ -26,6 +26,6 @@ export class UsersComponent extends BaseCrud {
   ]
 
   deleteHandler(item: any): void {
-    this.delete('Eliminar usuario', `Estas seguro de eliminar el usuario "${item.nombres}"`, item)
+    this.delete('Eliminar usuario', `Estas seguro de eliminar el usuario "${item.correo}"`, item)
   }
 }

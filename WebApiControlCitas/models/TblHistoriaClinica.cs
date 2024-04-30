@@ -19,14 +19,14 @@ public partial class TblHistoriaClinica
     /// <summary>
     /// Hora de atención de la historia clínica
     /// </summary>
-    public TimeOnly HoraAtencion { get; set; }
+    public string HoraAtencion { get; set; }
 
     /// <summary>
     /// Observaciones en la historia clínica
     /// </summary>
     public string Observaciones { get; set; } = null!;
 
-    public virtual TblMedico IdMedicoNavigation { get; set; } = null!;
+    public virtual TblMedico? IdMedicoNavigation { get; set; } = null!;
 
-    public virtual TblPaciente IdPacienteNavigation { get; set; } = null!;
+    public virtual TblPaciente? IdPacienteNavigation { get; set; } = null!;
 }

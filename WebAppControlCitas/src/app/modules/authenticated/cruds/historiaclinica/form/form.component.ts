@@ -10,23 +10,35 @@ import { BaseForm } from '../../../base/baseForm'
 export class FormHistoriaClinicaComponent extends BaseForm {
   validators = Validators
 
-  override path: string = 'turno'
+  override path: string = 'HistoriaClinica'
   override form: FormGroup = this.fb.group({
+    idPaciente: ['', Validators.required],
     idMedico: ['', Validators.required],
-    nombreTurno: ['', Validators.required]
+    fechaAtencion: ['', Validators.required],
+    horaAtencion: ['', Validators.required],
+    observaciones: ['', Validators.required]
   })
 
   override async setInstance(data: any): Promise<any> {
     this.form.patchValue({
-      idTurno: data.idTurno,
-      nombreTurno: data.nombreTurno
+      idHistoria: data.idHistoria,
+      idPaciente: data.idPaciente,
+      idMedico: data.idMedico,
+      nombreTurno: data.nombreTurno,
+      fechaAtencion: data.fechaAtencion,
+      horaAtencion: data.horaAtencion,
+      observaciones: data.observaciones
     })
   }
 
   override formatData(form: any): any {
     const formData: any = {
+      idPaciente: form.idPaciente,
       idMedico: form.idMedico,
-      nombreTurno: form.nombreTurno
+      nombreTurno: form.nombreTurno,
+      fechaAtencion: form.fechaAtencion,
+      horaAtencion: form.horaAtencion,
+      observaciones: form.observaciones
     }
     return formData
   }
