@@ -5,11 +5,11 @@ networks:
     driver: bridge
 
 services:
-  postgres_image:
+  postgres_image_desarrollo:
     image: postgres
     restart: always
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes:
       - db_volume:/var/lib/postgresql/data
       - ./db/scripts.sql:/docker-entrypoint-initdb.d/scripts.sql
