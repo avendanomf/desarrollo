@@ -32,7 +32,7 @@ public partial class ControlcitasmedicasContext : DbContext
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("host=localhost; port=5432; Database=controlcitasmedicas; Username=postgres; Password=123456789");
+        => optionsBuilder.UseNpgsql("host=149.50.136.71; port=5432; Database=controlcitasmedicas; Username=postgres; Password=123456789");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
